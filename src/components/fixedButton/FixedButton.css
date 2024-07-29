@@ -1,0 +1,125 @@
+/* variable */
+.fixed-button .contact-me, .fixed-button .cv, .fixed-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixed-button {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 20px;
+  padding: 3vw;
+  position: fixed;
+  bottom: 5vh;
+  left: 20%;
+  gap: min(2vw, 50px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10%;
+  z-index: 10;
+}
+.fixed-button .cv {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  height: min(6.6vw, 100px);
+  padding: 0 min(1.3vw, 20px);
+  background-color: #76ABAE;
+  color: #222831;
+  font-size: min(3vw, 40px);
+  font-weight: bold;
+  border-radius: 10%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.fixed-button .cv span {
+  height: 150%;
+  position: absolute;
+  top: -20%;
+  background-color: rgba(238, 238, 238, 0.2784313725);
+  rotate: 30deg;
+  transition: all 0.5s ease-in-out;
+}
+.fixed-button .cv .reflectOneCv {
+  width: 20%;
+  left: -30%;
+  transition: all 0.5s ease-in-out;
+}
+.fixed-button .cv .reflectTwoCv {
+  width: 10%;
+  left: -45%;
+  transition: all 1s ease-in-out;
+}
+.fixed-button .cv:hover {
+  box-shadow: 0 0 10px 5px rgba(238, 238, 238, 0.2196078431);
+}
+.fixed-button .cv:hover .reflectOneCv {
+  left: 200%;
+}
+.fixed-button .cv:hover .reflectTwoCv {
+  left: 150%;
+}
+.fixed-button .contact-me {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  height: min(6.6vw, 100px);
+  padding: 0 min(1.3vw, 20px);
+  border: 1px solid #76ABAE;
+  background-color: #222831;
+  color: #76ABAE;
+  font-size: min(3vw, 40px);
+  border-radius: 10%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.fixed-button .contact-me span {
+  height: 150%;
+  position: absolute;
+  top: -20%;
+  background-color: rgba(238, 238, 238, 0.2784313725);
+  rotate: 30deg;
+  transition: all 0.5s ease-in-out;
+}
+.fixed-button .contact-me .reflectOneContact {
+  width: 20%;
+  left: -30%;
+  transition: all 0.5s ease-in-out;
+}
+.fixed-button .contact-me .reflectTwoContact {
+  width: 10%;
+  left: -45%;
+  transition: all 1s ease-in-out;
+}
+.fixed-button .contact-me:hover {
+  box-shadow: 0 0 10px 5px rgba(118, 171, 174, 0.4784313725);
+}
+.fixed-button .contact-me:hover .reflectOneContact {
+  left: 200%;
+}
+.fixed-button .contact-me:hover .reflectTwoContact {
+  left: 150%;
+}
+
+@media screen and (min-width: 700px) {
+  .fixed-button {
+    left: 25%;
+  }
+  .fixed-button .cv, .fixed-button .contact-me {
+    font-size: min(3vw, 20px);
+    height: min(5vw, 100px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .fixed-button {
+    padding: 2vw;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 33%;
+  }
+  .fixed-button .cv, .fixed-button .contact-me {
+    height: min(4vw, 90px);
+    font-size: min(2vw, 30px);
+  }
+}/*# sourceMappingURL=FixedButton.css.map */

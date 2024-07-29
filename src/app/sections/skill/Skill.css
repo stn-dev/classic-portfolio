@@ -1,0 +1,144 @@
+/* variable */
+.skill-section .skills-container h4, .skill-section .skills-container .skill-container .scroller .skill .hoverEffect {
+  font-size: min(5vw, 50px);
+  font-weight: bold;
+}
+
+.skill-section .skills-container .skill-container .scroller .skill .hoverEffect, .skill-section .title-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-section .skills-container .core-part, .skill-section .skills-container .framework-part, .skill-section .skills-container .tools-part, .skill-section .skills-container, .skill-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-section {
+  width: 100vw;
+  min-height: 100vh;
+  gap: 3vw;
+  padding-top: min(10vw, 150px);
+}
+.skill-section .title-skill {
+  max-width: 100vw;
+  min-height: 100px;
+  gap: 1.8vw;
+}
+.skill-section .title-skill svg {
+  width: min(35vw, 800px);
+  height: min(13vw, 400px);
+}
+.skill-section .title-skill svg text {
+  color: transparent;
+  stroke: #76ABAE;
+  stroke-width: 1;
+  font-size: 290%;
+  stroke-dasharray: 600px;
+  stroke-dashoffset: 600px;
+  font-family: "Viga", sans-serif;
+}
+.skill-section .title-skill h2 {
+  font-size: min(12.5vw, 200px);
+  font-family: "Viga", sans-serif;
+  color: #76ABAE;
+}
+.skill-section .skills-container {
+  width: 100vw;
+  min-height: 60vh;
+  gap: 9.3vw;
+}
+.skill-section .skills-container .skill-container {
+  width: min(90vw, 1000px);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #222831 20%, #222831 80%, transparent);
+}
+.skill-section .skills-container .skill-container:hover .scroller {
+  animation-play-state: paused;
+}
+.skill-section .skills-container .skill-container .scroller {
+  white-space: nowrap;
+  animation: scrollSkillCore var(--myScrollStyle) linear infinite;
+  animation-delay: calc(var(--myScrollStyle) * -1);
+}
+.skill-section .skills-container .skill-container .scroller .skill {
+  width: min(32vw, 310px);
+  height: min(21.3vw, 205px);
+  position: relative;
+  display: inline-flex;
+  margin: 5px;
+  overflow: hidden;
+}
+.skill-section .skills-container .skill-container .scroller .skill:hover .hoverEffect {
+  width: 100%;
+  opacity: 1;
+}
+.skill-section .skills-container .skill-container .scroller .skill img {
+  width: 100%;
+  height: 100%;
+}
+.skill-section .skills-container .skill-container .scroller .skill .hoverEffect {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #76ABAE;
+  color: #222831;
+  opacity: 0;
+  border-radius: min(1.8vw, 18px);
+  transition: all 0.5s ease-in-out;
+}
+@keyframes scrollSkillCore {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.skill-section .skills-container .skill-container .scroller2 {
+  animation: scrollSkill2 var(--myScrollStyle) linear infinite;
+  animation-delay: calc(var(--myScrollStyle) / -2);
+}
+@keyframes scrollSkill2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.skill-section .skills-container h4 {
+  color: #EEEEEE;
+}
+.skill-section .skills-container .core-part, .skill-section .skills-container .framework-part, .skill-section .skills-container .tools-part {
+  width: 100%;
+  min-height: 10vw;
+  gap: 3vw;
+}
+@media screen and (min-width: 1280px) {
+  .skill-section .title-skill svg {
+    width: min(25vw, 600px);
+    height: min(9vw, 300px);
+  }
+  .skill-section .title-skill svg text {
+    font-size: 270%;
+  }
+  .skill-section .title-skill h2 {
+    font-size: min(8vw, 200px);
+  }
+  .skill-section .skills-container {
+    gap: 7vw;
+  }
+  .skill-section .skills-container h4 {
+    font-size: min(1.8vw, 30px);
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=Skill.css.map */

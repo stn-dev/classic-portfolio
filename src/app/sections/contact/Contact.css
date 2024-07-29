@@ -1,0 +1,217 @@
+/* variable */
+.contact-section .form-part-container .title-and-form .form-part-title {
+  font-size: min(6.25vw, 50px);
+  font-weight: bolder;
+}
+
+.contact-section .form-part-container .informations div, .contact-section .title-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section .form-part-container .informations, .contact-section .form-part-container .title-and-form .formulaire, .contact-section .form-part-container .title-and-form, .contact-section .form-part-container, .contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section {
+  width: 100vw;
+  min-height: 100vh;
+  gap: 5vw;
+  padding-top: min(10vw, 200px);
+  margin-bottom: min(10vw, 200px);
+}
+.contact-section .title-contact {
+  max-width: 100vw;
+  min-height: 100px;
+  gap: 2vw;
+}
+.contact-section .title-contact svg {
+  width: min(60vw, 800px);
+  height: min(13vw, 400px);
+}
+.contact-section .title-contact svg text {
+  color: transparent;
+  stroke: #76ABAE;
+  stroke-width: 1;
+  font-size: 290%;
+  stroke-dasharray: 600px;
+  stroke-dashoffset: 600px;
+  font-family: "Viga", sans-serif;
+}
+.contact-section .title-contact h2 {
+  font-size: clamp(12.5vw, 200px, 40px);
+  font-family: "Viga", sans-serif;
+  color: #76ABAE;
+}
+.contact-section .form-part-container {
+  width: 85vw;
+  min-height: 50vh;
+  padding: 5vw;
+  margin-inline: auto;
+  background-color: #31363F;
+  align-items: flex-start;
+  gap: 3vw;
+}
+.contact-section .form-part-container .title-and-form {
+  width: min(80vw, 1500px);
+  align-items: flex-start;
+  gap: 5vw;
+}
+.contact-section .form-part-container .title-and-form .form-part-title {
+  width: min(48vw, 480px);
+  min-height: 100px;
+  color: #EEEEEE;
+}
+.contact-section .form-part-container .title-and-form .form-part-title span {
+  color: #76ABAE;
+}
+.contact-section .form-part-container .title-and-form .formulaire {
+  width: min(65vw, 650px);
+  min-height: 250px;
+  align-items: flex-start;
+  gap: min(2vw, 40px);
+}
+.contact-section .form-part-container .title-and-form .formulaire input {
+  width: 100%;
+  height: min(12vw, 100px);
+  padding: 0 1.5vw;
+  font-size: min(3vw, 30px);
+  color: #222831;
+  background-color: #EEEEEE;
+  border: 0.4vw solid #76ABAE;
+  border-radius: min(1.5vw, 20px);
+  outline: none;
+}
+.contact-section .form-part-container .title-and-form .formulaire input::-moz-placeholder {
+  color: #76ABAE;
+}
+.contact-section .form-part-container .title-and-form .formulaire input::placeholder {
+  color: #76ABAE;
+}
+.contact-section .form-part-container .title-and-form .formulaire textarea {
+  width: 100%;
+  height: min(32vw, 300px);
+  padding: 2vw 1.5vw;
+  font-size: min(3vw, 30px);
+  color: #222831;
+  background-color: #EEEEEE;
+  border: 0.4vw solid #76ABAE;
+  border-radius: 1.5vw;
+  outline: none;
+}
+.contact-section .form-part-container .title-and-form .formulaire textarea::-moz-placeholder {
+  color: #76ABAE;
+}
+.contact-section .form-part-container .title-and-form .formulaire textarea::placeholder {
+  color: #76ABAE;
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn {
+  width: min(24vw, 170px);
+  height: min(8vw, 70px);
+  position: relative;
+  font-size: min(3vw, 30px);
+  font-weight: bold;
+  color: #EEEEEE;
+  background-color: #76ABAE;
+  border-radius: min(1.5vw, 20px);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn span {
+  height: 150%;
+  position: absolute;
+  top: -20%;
+  background-color: rgba(238, 238, 238, 0.2784313725);
+  rotate: 30deg;
+  transition: all 0.5s ease-in-out;
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn .reflectOne {
+  width: 20%;
+  left: -30%;
+  transition: all 0.5s ease-in-out;
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn .reflectTwo {
+  width: 10%;
+  left: -45%;
+  transition: all 1s ease-in-out;
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn:hover {
+  box-shadow: 0 0 10px 5px rgba(118, 171, 174, 0.4784313725);
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn:hover .reflectOne {
+  left: 200%;
+}
+.contact-section .form-part-container .title-and-form .formulaire .submit-btn:hover .reflectTwo {
+  left: 150%;
+}
+.contact-section .form-part-container .title-and-form .formulaire .onError {
+  border-color: red;
+  background-color: rgb(255, 242, 242);
+}
+.contact-section .form-part-container .informations {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 50px;
+  margin-top: 2.6vw 0;
+  gap: min(2.4vw, 50px);
+  align-items: flex-start;
+  color: #EEEEEE;
+  font-size: min(3vw, 30px);
+}
+.contact-section .form-part-container .informations div {
+  gap: 1vw;
+}
+.contact-section .form-part-container .informations div img {
+  width: min(2.7vw, 25px);
+  height: min(2.9vw, 30px);
+  border: 1px solid white;
+}
+
+@media screen and (min-width: 800px) {
+  .contact-section .title-and-form .form-part-title {
+    font-size: min(4vw, 60px);
+    font-weight: bolder;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .contact-section .form-part-container {
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-section .form-part-container .title-and-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3vw;
+  }
+  .contact-section .form-part-container .title-and-form .form-part-title {
+    width: min(50vw, 600px);
+    font-size: min(7vw, 60px);
+    font-weight: bolder;
+  }
+  .contact-section .form-part-container .informations {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .contact-section .form-part-container .submit-btn {
+    width: min(20vw, 200px);
+    height: min(4vw, 70px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact-section .title-contact svg {
+    width: min(40vw, 800px);
+    height: min(9vw, 300px);
+  }
+  .contact-section .title-contact svg text {
+    font-size: 270%;
+  }
+  .contact-section .title-contact h2 {
+    font-size: min(8vw, 200px);
+  }
+}/*# sourceMappingURL=Contact.css.map */

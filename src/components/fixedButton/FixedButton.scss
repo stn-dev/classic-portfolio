@@ -1,0 +1,194 @@
+ /* variable */
+
+ // typeface
+
+//  @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+//  // "Viga", sans-serif
+ 
+//  @import url('https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+//  // "Zen Loop", cursive;
+ 
+//  @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+// //  "Inria Sans", sans-serif
+
+ 
+$viga: "Viga", sans-serif ;
+$zen : "Zen Loop", cursive;
+$irina : "Inria Sans", sans-serif;
+
+ //color
+ $dark:#222831;
+ $Primary:#31363F;
+ $neutre:#EEEEEE;
+ $contrasted:#76ABAE;
+
+ //font size
+ $title: min(12.5vw , 200px);
+ $textLigth:min(3vw , 40px);
+ $textBold:min(5vw , 50px);
+ $textBolder:min(6.25vw , 60px);
+
+ //font weigth
+%textbold {
+    font-size: $textBold;
+    font-weight: bold;
+}
+%textBolder {
+    font-size: $textBolder;
+    font-weight: bolder;
+}
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-button {
+    width: fit-content;
+    min-height: 20px;
+    padding: 3vw;
+    position: fixed;
+    bottom: 5vh;
+    left: 20%;
+    @extend %flex;
+    gap: min(2vw , 50px);
+    backdrop-filter: blur(5px);
+    border-radius: 10%;
+    z-index: 10;
+
+
+    .cv {
+        width: fit-content;
+        position: relative;
+        height: min(6.6vw , 100px);
+        padding: 0 min(1.3vw , 20px);
+        background-color: $contrasted;
+        color: $dark;
+        font-size: $textLigth;
+        @extend %flex;
+        font-weight: bold;
+        border-radius: 10%;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+
+        span {
+            height: 150%;
+            
+            position: absolute;
+            top: -20%;
+            background-color: #eeeeee47;
+            
+            rotate: 30deg;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .reflectOneCv {
+            width: 20%;
+            left: -30%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .reflectTwoCv {
+            width: 10%;
+            left: -45%;
+            transition: all 1s ease-in-out;
+        }
+        &:hover {
+            box-shadow: 0 0 10px 5px #eeeeee38;
+        }
+
+        &:hover .reflectOneCv {
+            left: 200%;
+        }
+        &:hover .reflectTwoCv {
+            left: 150%;
+        }
+
+    }
+
+    .contact-me {
+        width: fit-content;
+        position: relative;
+        height: min(6.6vw , 100px);
+        padding: 0 min(1.3vw , 20px);
+        border: 1px solid $contrasted;
+        background-color: $dark;
+        color: $contrasted;
+        font-size: $textLigth;
+        @extend %flex;
+        border-radius: 10%;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+
+        span {
+            height: 150%;
+            
+            position: absolute;
+            top: -20%;
+            background-color: #eeeeee47;
+            
+            rotate: 30deg;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .reflectOneContact {
+            width: 20%;
+            left: -30%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .reflectTwoContact {
+            width: 10%;
+            left: -45%;
+            transition: all 1s ease-in-out;
+        }
+        &:hover {
+            box-shadow: 0 0 10px 5px #76abae7a;
+        }
+
+        &:hover .reflectOneContact {
+            left: 200%;
+        }
+        &:hover .reflectTwoContact {
+            left: 150%;
+        }
+    }
+}
+
+@media screen and (min-width:700px) {
+
+    $textLigth:min(3vw , 20px);
+
+    .fixed-button {
+        left: 25%;
+        .cv , .contact-me {
+            font-size: $textLigth;
+            height: min(5vw , 100px );
+        }   
+    }
+}
+
+@media screen and (min-width:1280px) {
+    
+    $title: min(12vw , 400px);
+    $textLigth:min(2vw , 30px);
+    $textBold:min(5vw , 50px);
+    $textBolder:min(6.25vw , 60px);
+
+    .fixed-button {
+        padding: 2vw;
+        backdrop-filter: blur(8px);
+        left: 33%;
+
+        .cv , .contact-me {
+            height: min(4vw , 90px );
+            font-size: $textLigth;
+        }
+    }
+}
