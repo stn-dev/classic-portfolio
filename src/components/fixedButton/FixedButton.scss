@@ -2,14 +2,14 @@
 
  // typeface
 
-//  @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
-//  // "Viga", sans-serif
+ @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+ // "Viga", sans-serif
  
-//  @import url('https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap');
-//  // "Zen Loop", cursive;
+ @import url('https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+ // "Zen Loop", cursive;
  
-//  @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap');
-// //  "Inria Sans", sans-serif
+ @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+//  "Inria Sans", sans-serif
 
  
 $viga: "Viga", sans-serif ;
@@ -55,12 +55,13 @@ $irina : "Inria Sans", sans-serif;
     padding: 3vw;
     position: fixed;
     bottom: 5vh;
-    left: 20%;
+    left: 25%;
     @extend %flex;
     gap: min(2vw , 50px);
     backdrop-filter: blur(5px);
     border-radius: 10%;
     z-index: 10;
+    transition: all 0.5s ease-in-out;
 
 
     .cv {
@@ -161,12 +162,17 @@ $irina : "Inria Sans", sans-serif;
     }
 }
 
-@media screen and (min-width:700px) {
+.hiddenButton {
+    transition: all 0.5s ease-in-out;
+    bottom: -10vh;
+}
+
+@media screen and (min-width:800px) {
 
     $textLigth:min(3vw , 20px);
 
     .fixed-button {
-        left: 25%;
+        left: 29%;
         .cv , .contact-me {
             font-size: $textLigth;
             height: min(5vw , 100px );

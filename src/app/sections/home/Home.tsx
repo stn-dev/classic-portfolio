@@ -5,6 +5,7 @@ import './Home.scss'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import Document from 'next/document'
 
 function Home() {
     const [x, setX] = useState(0)
@@ -69,7 +70,7 @@ function Home() {
                 <h1>MARIO</h1>
                 <h3>
                     <span>
-                        FRONT END
+                        FRONT-END
                     </span>
                     <span>
                         DEVELOPER

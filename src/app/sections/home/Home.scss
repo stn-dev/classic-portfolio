@@ -3,14 +3,14 @@
 
  // typeface
 
-// @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
-// // "Viga", sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+// "Viga", sans-serif
 
-// @import url('https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap');
-// // "Zen Loop", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+// "Zen Loop", cursive;
 
-// @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap');
-// // "Inria Sans", sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+// "Inria Sans", sans-serif
 
 $viga: "Viga", sans-serif ;
 $zen : "Zen Loop", cursive;
@@ -236,8 +236,8 @@ $irina : "Inria Sans", sans-serif;
                 justify-content: center;
                 align-items: center;
                 span {
-                    font-size: min(9vw , 90px);
-                    line-height: min(7vw , 100px);
+                    font-size: min(9vw , 150px);
+                    line-height: min(8vw , 130px);
                 }
             }
        }
@@ -249,10 +249,11 @@ $irina : "Inria Sans", sans-serif;
 
             &::before {
                 inset: 6rem;
+                opacity: 0.5;
             };
     
             &::after {
-                inset: 4rem;
+                inset: 8%;
             }
        }
 

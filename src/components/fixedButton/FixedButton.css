@@ -1,4 +1,7 @@
 /* variable */
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
 .fixed-button .contact-me, .fixed-button .cv, .fixed-button {
   display: flex;
   justify-content: center;
@@ -12,12 +15,13 @@
   padding: 3vw;
   position: fixed;
   bottom: 5vh;
-  left: 20%;
+  left: 25%;
   gap: min(2vw, 50px);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 10%;
   z-index: 10;
+  transition: all 1s ease-in-out;
 }
 .fixed-button .cv {
   width: -moz-fit-content;
@@ -102,9 +106,14 @@
   left: 150%;
 }
 
-@media screen and (min-width: 700px) {
+.hiddenButton {
+  transition: all 0.5s ease-in-out;
+  bottom: -10vh;
+}
+
+@media screen and (min-width: 800px) {
   .fixed-button {
-    left: 25%;
+    left: 29%;
   }
   .fixed-button .cv, .fixed-button .contact-me {
     font-size: min(3vw, 20px);

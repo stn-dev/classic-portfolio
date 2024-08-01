@@ -1,4 +1,7 @@
 /* variable */
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
 .home-section .big-text h3 {
   display: flex;
   justify-content: center;
@@ -174,8 +177,8 @@
     align-items: center;
   }
   .home-section .big-text h3 span {
-    font-size: min(9vw, 90px);
-    line-height: min(7vw, 100px);
+    font-size: min(9vw, 150px);
+    line-height: min(8vw, 130px);
   }
   .home-section .image2onHero {
     width: min(30vw, 1000px);
@@ -185,9 +188,10 @@
   }
   .home-section .image2onHero::before {
     inset: 6rem;
+    opacity: 0.5;
   }
   .home-section .image2onHero::after {
-    inset: 4rem;
+    inset: 8%;
   }
   .home-section .social-media {
     width: min(4.3vw, 30px);
