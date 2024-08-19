@@ -54,7 +54,7 @@ $irina : "Inria Sans", sans-serif;
     min-height: 20px;
     padding: 3vw;
     position: fixed;
-    bottom: 5vh;
+    bottom: 4vh;
     left: 25%;
     @extend %flex;
     gap: min(2vw , 50px);
@@ -164,7 +164,7 @@ $irina : "Inria Sans", sans-serif;
 
 .hiddenButton {
     transition: all 0.5s ease-in-out;
-    bottom: -10vh;
+    bottom: -15vh;
 }
 
 @media screen and (min-width:800px) {
@@ -196,5 +196,9 @@ $irina : "Inria Sans", sans-serif;
             height: min(4vw , 90px );
             font-size: $textLigth;
         }
+    }
+
+    .hiddenButton {
+        bottom: -20vh;
     }
 }

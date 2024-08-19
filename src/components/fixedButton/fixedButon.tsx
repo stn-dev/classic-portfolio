@@ -12,13 +12,9 @@ function FixedButton() {
 
         if (window.scrollY > lastY) {
             setShowButton(true)
-            console.log(showButton)
-            console.log(lastY)
 
         } else {
             setShowButton(false)
-            console.log(showButton)
-            console.log(lastY)
         }
 
         lastY = window.scrollY
@@ -38,7 +34,7 @@ function FixedButton() {
         >
 
             <button className="cv">
-                <a href="#" download="developer cv.png" >
+                <a href="#" download="image/developerCV.png" >
                     DOWNLOAD CV
                 </a>
                 <span className='reflectOneCv' ></span>

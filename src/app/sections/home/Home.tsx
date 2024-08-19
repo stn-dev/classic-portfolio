@@ -1,34 +1,33 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.scss'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import Document from 'next/document'
 
 function Home() {
     const [x, setX] = useState(0)
     const [y, setY] = useState(0)
-    const [offsetX, setOffsetX] = useState<Number>(0)
-    const [offsetY, setOffsetY] = useState<Number>(0)
-
-    const middleX = window.innerWidth / 2
-    const middleY = window.innerHeight / 2
-
+    const [offsetX, setOffsetX] = useState(0)
+    const [offsetY, setOffsetY] = useState(0)
+    const [width, setWidth] = useState(0)
+    const [height, setHeight] = useState(0)
 
     const catchPosition = (e: React.MouseEvent) => {
+
         setX(e.clientX)
         setY(e.clientY)
 
-        setOffsetX(((x - middleX) / middleX) * 50)
-        setOffsetY(-1 * (((y - middleY) / middleY) * 50))
+        setOffsetX(((x - width) / width) * 50)
+        setOffsetY(-1 * (((y - height) / height) * 50))
 
     }
 
-
-
-
+    useEffect(() => {
+        setWidth(window.innerWidth / 2)
+        setHeight(window.innerHeight / 2)
+    }, [x, y])
 
 
 
@@ -86,7 +85,7 @@ function Home() {
             </div>
 
             <div className="imageOnHero" >
-                <img src="/image/heroImage.png" alt="" />
+                <img src="/image/heroImageOnMobile2.png" alt="" />
             </div>
 
             <div
@@ -94,7 +93,7 @@ function Home() {
 
                 style={{ transform: `rotateX(${offsetY}deg) rotateY(${offsetX}deg)` }}
             >
-                <img src="/image/bgHeroImage.png" alt="" />
+                <img src="/image/heroImageOndesktop.png" alt="" />
             </div>
 
             <div className="scroll-indication">

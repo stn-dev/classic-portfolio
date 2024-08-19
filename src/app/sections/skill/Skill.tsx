@@ -9,8 +9,8 @@ import { ScrollTrigger } from 'gsap/all'
 function Skill() {
 
     const scrollStyle1 = { "--myScrollStyle": "15s" } as React.CSSProperties
-    const scrollStyle2 = { "--myScrollStyle": "10s" } as React.CSSProperties
-    const scrollStyle3 = { "--myScrollStyle": "5s" } as React.CSSProperties
+    const scrollStyle2 = { "--myScrollStyle": "12s" } as React.CSSProperties
+    const scrollStyle3 = { "--myScrollStyle": "8s" } as React.CSSProperties
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger)

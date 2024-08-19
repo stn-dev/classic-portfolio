@@ -48,7 +48,7 @@ function About() {
             </div>
 
             <div className="image-and-text">
-                <img src="/image/abouImage.png" alt="" className="aboutImage" />
+                <img src="/image/aboutMyImage.png" alt="" className="aboutImage" />
 
                 <div className="text-about">
                     I AM A

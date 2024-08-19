@@ -5,8 +5,12 @@ import './Contact.scss'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 
 type SendMail = (e: React.FormEvent) => void
+
+// service_56bza87  template_8phdps8  Y55U-eVuDLLpHV7wh
 
 function Contact() {
 
@@ -16,6 +20,16 @@ function Contact() {
     const formRef = useRef<HTMLFormElement | null>(null)
 
     const sendMail: SendMail = (e) => {
+
+        let name = nameRef.current?.value
+        let email = mailRef.current?.value
+        let message = messageRef.current?.value
+
+        const templateParams = {
+            to_name: "Mario",
+            name: email,
+            message: message
+        }
 
         e.preventDefault()
 
@@ -36,8 +50,12 @@ function Contact() {
             mailRef.current?.value === "".trim() ||
             messageRef.current?.value === "".trim()
         ) {
-            alert("information incomplete")
-            return
+
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Some information are missing",
+            });
 
         } else {
 
@@ -45,14 +63,31 @@ function Contact() {
             mailRef?.current ? mailRef.current.className = "" : null
             messageRef?.current ? messageRef.current.className = "" : null
 
-            alert("message send succesfully")
+            if (name !== "".trim() && email !== "".trim() && message !== "".trim()) {
+                emailjs
+                    .send("service_56bza87", "template_8phdps8", templateParams, "Y55U-eVuDLLpHV7wh")
+                    .then(
+                        function (response) {
 
-            formRef.current?.reset()
+                            Swal.fire({
+                                icon: "success",
+                                title: "OK",
+                                text: "Message send successfully",
+                            });
+
+                            formRef.current?.reset()
+
+                            console.log(response)
+                        },
+                        function (error) {
+                            console.log("error is " + error)
+                            console.log("there is an error")
+                        }
+                    )
+            }
 
             return
         }
-
-
 
     }
 
@@ -69,6 +104,10 @@ function Contact() {
         })
 
         tl
+            // .to(".title-contact h2", {
+            //     opacity: 0,
+            //     translateY: -15
+            // })
             .to(".title-contact svg text", {
                 strokeDashoffset: 0,
                 duration: 4,
@@ -136,17 +175,17 @@ function Contact() {
 
                 <div className="informations">
                     <div className="mail">
-                        <img src="" />
+                        <img src="icon/mail.png" />
                         <p>mariosantatra@gmail.com</p>
                     </div>
 
                     <div className="phone">
-                        <img src="" />
+                        <img src="icon/phone.png" />
                         <p>+261 38 82 090 64</p>
                     </div>
 
                     <div className="localisation">
-                        <img src="" />
+                        <img src="icon/localisation.png" />
                         <p>Madagascar / Tana</p>
                     </div>
                 </div>
