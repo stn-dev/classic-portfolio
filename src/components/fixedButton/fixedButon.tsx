@@ -34,7 +34,7 @@ function FixedButton() {
         >
 
             <button className="cv">
-                <a href="#" download="image/developerCV.png" >
+                <a href="image/developerCV.png" download="download" >
                     DOWNLOAD CV
                 </a>
                 <span className='reflectOneCv' ></span>

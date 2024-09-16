@@ -78,9 +78,17 @@ function Home() {
             </div>
 
             <div className="social-media">
-                <img src="/icon/facebook.png" alt="faccebook icon" />
-                <img src="/icon/insta.png" alt="instagram icon" />
-                <img src="/icon/whatsapp.png" alt="whatsapp icon" />
+                <a href="https://www.facebook.com/stn.raf.9" target="_blank" >
+                    <img src="/icon/facebook.png" alt="faccebook icon" />
+                </a>
+
+                <a href="https://www.instagram.com/rafstn/" target='_blank'>
+                    <img src="/icon/insta.png" alt="instagram icon" />
+                </a>
+
+                <a href="https://web.whatsapp.com/" target="_blank" >
+                    <img src="/icon/whatsapp.png" alt="whatsapp icon" />
+                </a>
                 <hr />
             </div>
 

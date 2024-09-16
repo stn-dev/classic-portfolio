@@ -67,7 +67,7 @@ function About() {
                     AND
                     <span> FUNCTIONALITY </span>
                     I GOT MY CERTIFICATE FROM
-                    <span> <a href="http://" target="_blank" >SAHA-ACADEMY</a> </span>
+                    <span> <a href="https://www.facebook.com/saha.academy.261/" target="_blank" >SAHA-ACADEMY</a> </span>
                     WHERE I LEARNED THE BEST WORKFLOW AS
                     WEB DEVELOPER
                     IF YOU HAVE A PROJECT TO BUILD.
