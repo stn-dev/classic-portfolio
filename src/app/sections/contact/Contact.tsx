@@ -110,8 +110,8 @@ function Contact() {
             // })
             .to(".title-contact svg text", {
                 strokeDashoffset: 0,
-                duration: 4,
-                delay: 0.5
+                duration: 1.5,
+                delay: 0
             })
 
     }, [])

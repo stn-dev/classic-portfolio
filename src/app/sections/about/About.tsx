@@ -2,9 +2,9 @@
 
 import React from 'react'
 import './About.scss'
-import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import gsap from 'gsap'
 
 
 function About() {
@@ -26,8 +26,8 @@ function About() {
         tl
             .to(".title svg text", {
                 strokeDashoffset: 0,
-                duration: 5,
-                delay: 0.5
+                duration: 1.5,
+                delay: 0
 
             })
 

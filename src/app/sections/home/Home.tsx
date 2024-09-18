@@ -19,8 +19,8 @@ function Home() {
         setX(e.clientX)
         setY(e.clientY)
 
-        setOffsetX(((x - width) / width) * 50)
-        setOffsetY(-1 * (((y - height) / height) * 50))
+        setOffsetX(((x - width) / width) * 30)
+        setOffsetY(-1 * (((y - height) / height) * 30))
 
     }
 
