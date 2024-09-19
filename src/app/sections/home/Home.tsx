@@ -65,7 +65,7 @@ function Home() {
             onMouseMove={catchPosition}
         >
             <div className="big-text">
-                <p>I'M</p>
+                <p>I&apos;M</p>
                 <h1>MARIO</h1>
                 <h3>
                     <span>

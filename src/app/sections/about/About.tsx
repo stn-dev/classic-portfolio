@@ -73,7 +73,7 @@ function About() {
                     WEB DEVELOPER
                     IF YOU HAVE A PROJECT TO BUILD.
                     <span> <a href="#contact" >CONTACT ME</a> </span>
-                    AND LET'S MAKE THE MAGIC HAPPEN
+                    AND LET&apos;S MAKE THE MAGIC HAPPEN
                 </div>
             </div>
 
