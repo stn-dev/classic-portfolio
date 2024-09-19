@@ -104,11 +104,6 @@ function Contact() {
         })
 
         tl
-            .from(".title-contact h2", {
-                opacity: 0,
-                translateY: -15,
-                duration: 2
-            })
             .to(".title-contact svg text", {
                 strokeDashoffset: 0,
                 duration: 1.5,
