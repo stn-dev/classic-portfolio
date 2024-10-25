@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "stn-dev",
     images: [
       {
-        url: 'public/opengraph-image.png',
+        url: 'http://stn-portfolio.vercel.app/public/image/opengraph-image.png',
         width: 1200,
         height: 630,
         alt: "home section image"
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "stn | portfolio",
     description: "This is my personal portfolio as a front-end developer",
-    images: ["http://stn-portfolio.vercel.app/public/opengraph-image.png"],
+    images: ["http://stn-portfolio.vercel.app/public/image/opengraph-image.png"],
   },
 };
 
