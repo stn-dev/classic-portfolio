@@ -3,7 +3,7 @@ import "./globals.scss";
 
 
 export const metadata: Metadata = {
-  title: "stn dev portfolio",
+  title: "stn portfolio",
   description: "This is my personal portfolio as a front-end developer",
   openGraph: {
     title: "stn dev portfolio",
