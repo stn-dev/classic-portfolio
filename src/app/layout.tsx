@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import { url } from "inspector";
 
 
 export const metadata: Metadata = {
@@ -12,8 +13,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "mg-MADAGASCAR",
     siteName: "stn-dev",
-    images: "opengraph-image.png"
-  }
+    images: [
+      {
+        url: 'public/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: "home section image"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "stn | portfolio",
+    description: "This is my personal portfolio as a front-end developer",
+    images: ["http://stn-portfolio.vercel.app/public/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
