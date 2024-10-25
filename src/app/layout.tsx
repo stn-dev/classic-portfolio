@@ -3,15 +3,16 @@ import "./globals.scss";
 
 
 export const metadata: Metadata = {
-  title: "stn portfolio",
+  title: "stn | portfolio",
   description: "This is my personal portfolio as a front-end developer",
   openGraph: {
     title: "stn dev portfolio",
     description: 'This is my personal portfolio as a front-end developer',
-    url: "http://stn-dev-portfolio.vercel.app",
+    url: "http://stn-portfolio.vercel.app",
     type: "website",
     locale: "mg-MADAGASCAR",
-    siteName: "stn dev"
+    siteName: "stn-dev",
+    images: "opengraph-image.png"
   }
 };
 
