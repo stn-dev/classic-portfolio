@@ -1,0 +1,12 @@
+.container-component {
+  @apply h-fit w-full mx-auto relative;
+  max-width: 1440px;
+  border: 1px solid white;
+  padding-inline: 20px;
+  @screen md {
+    padding-inline: 30px;
+  }
+  @screen xl {
+    padding-inline: 50px;
+  }
+}
