@@ -16,23 +16,17 @@ $irina: "Inria Sans", sans-serif;
   @apply w-full h-fit fixed z-10 bg-Primarmy;
 
   &__navbar {
-    @apply w-full h-fit flex items-center justify-between z-30;
-    padding-block: 10px;
+    @apply w-full h-fit flex items-center justify-between z-30 py-[10px];
     @screen md {
-      padding-block: 20px;
-    }
-    @screen lg {
-      padding-block: 20px;
+      @apply py-[20px];
     }
 
     &__logo {
       @screen md {
-        width: 120px;
-        height: 35px;
+        @apply w-[120px] h-[35px];
       }
       @screen xl {
-        width: 130px;
-        height: 40px;
+        @apply w-[130px] h-[40px];
       }
     }
 
@@ -51,19 +45,16 @@ $irina: "Inria Sans", sans-serif;
   }
 
   &__navigation-menu {
-    @apply w-screen h-screen absolute opacity-0 top-0 bg-Primarmy overflow-hidden px-5 z-50;
+    @apply w-screen h-screen absolute opacity-0 top-0 bg-Primarmy overflow-hidden px-5 z-50 left-[-100vw];
     @screen md {
-      padding-inline: 30px;
+      @apply px-[30px];
     }
     @screen lg {
-      padding-inline: 50px;
+      @apply px-[50px];
     }
-    left: -100vw;
 
     &__links {
-      @apply w-fit h-fit flex flex-col justify-center place-items-start mt-24;
-      max-height: 80vh;
-      gap: 15px;
+      @apply w-fit h-fit flex flex-col justify-center place-items-start mt-24 max-h-[80vh] gap-4;
       @screen md {
         @apply gap-6 mt-32;
       }
@@ -98,37 +89,24 @@ $irina: "Inria Sans", sans-serif;
     }
 
     &__deco {
-      @apply absolute;
-      width: 150px;
-      height: 170px;
-      bottom: -100%;
-      opacity: 0.5;
-      right: 0;
+      @apply absolute w-[150px] h-[170px] bottom-[-100%] right-0 opacity-50;
       @screen md {
-        width: 400px;
-        height: 400px;
+        @apply w-[300px] h-[300px];
       }
     }
     &__close {
-      @apply w-fit h-fit text-neutre text-sm absolute;
-      right: 20px;
-      top: 30px;
+      @apply w-fit h-fit text-neutre text-sm absolute right-[20px] top-[30px];
       @screen md {
-        @apply text-lg;
-        right: 30px;
-        top: 50px;
+        @apply text-lg right-[30px] top-[50px];
       }
       @screen lg {
-        @apply text-lg;
-        right: 50px;
+        @apply text-lg right-[50px];
       }
       @screen xl {
-        @apply text-xl;
-        right: 70px;
+        @apply text-xl right-[70px];
       }
       @screen 2xl {
         @apply text-2xl;
-
         right: clamp(70px, 7vw, 500px);
       }
       &:hover {
@@ -137,9 +115,6 @@ $irina: "Inria Sans", sans-serif;
     }
   }
   &__transition {
-    @apply w-screen h-screen bg-Primarmy absolute z-20;
-    top: -150vh;
-    left: 40%;
-    rotate: 25deg;
+    @apply w-screen h-screen bg-Primarmy absolute z-20 top-[-150vh] left-[40%] rotate-[25deg];
   }
 }

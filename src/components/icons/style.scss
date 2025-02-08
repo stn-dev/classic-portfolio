@@ -1,0 +1,18 @@
+.social-icon {
+  @apply w-[18px] h-[18px];
+  @screen md {
+    @apply w-[22px] h-[22px];
+  }
+  @screen xl {
+    @apply w-[25px] h-[25px];
+  }
+  @screen 2xl {
+    @apply w-[28px] h-[28px];
+  }
+}
+.arrow-down {
+  @apply w-[15px] h-[25px];
+  @screen md {
+    @apply w-[18px] h-[30px];
+  }
+}

@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import Home from "./sections/home/Home";
 import Header from "@/components/header/Header";
 import About from "./sections/about/About";

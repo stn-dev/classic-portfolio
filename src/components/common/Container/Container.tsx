@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import './Container.scss'
 
 interface ContainerProps {
   children: React.ReactNode
   tag?: "header" | "footer" | "div" | "section" | "nav"
   className?: string
+  id?: string
+  mouseMoveHandler?: (e: React.MouseEvent) => void
 }
 
 function Container(Props: ContainerProps) {
-  const { children, className = "", tag = "div" } = Props
+  const { children, className = "", tag = "div", mouseMoveHandler, id = "" } = Props
   const Tag = tag
   return (
-    <Tag className={`container-component ${className}`} >
+    <Tag
+      id={id}
+      className={`container-component ${className}`}
+      onMouseMove={mouseMoveHandler}
+    >
       {children}
     </Tag>
   )
