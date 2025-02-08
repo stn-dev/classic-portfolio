@@ -8,23 +8,21 @@ import Link from 'next/link'
 import Container from '../common/Container/Container'
 import Image from 'next/image'
 import './Header.scss'
-
+import Deco from '../icons/Deco'
 
 type Menufunction = () => void
 
 function Header() {
-
   const [menu, setMenu] = useState<boolean>(false)
   const toHideMenu: Menufunction = () => setMenu(false)
   const toShowMenu: Menufunction = () => setMenu(true)
 
-
   useGSAP(() => {
-    const tl = gsap.timeline()
+    const tl1 = gsap.timeline()
     const tl2 = gsap.timeline()
 
     if (menu) {
-      tl
+      tl1
         .to(".header-section__transition", {
           top: 0,
           display: "block",
@@ -51,27 +49,23 @@ function Header() {
         })
         .to(".header-section__navigation-menu__deco", {
           display: "block",
-          opacity: 1,
-          right: "-33vw",
-          bottom: "-34vw",
-          duration: 0.2
-        })
+          bottom: "0",
+          duration: 0.5
+        }, "-=0.4")
     }
-
-    if (menu == false) {
+    if (menu === false) {
       tl2
         .to(".header-section__navigation-menu__links li a", {
           opacity: 0,
           stagger: 0.1
         })
         .to(".header-section__navigation-menu__deco", {
-          right: "-52vw",
-          bottom: "-34vw",
-          duration: 0.1,
-        }, "-=0.2")
+          bottom: "-100%",
+          duration: 0.4,
+        }, "-=0.4")
         .to(".header-section__navigation-menu__deco", {
           display: "none",
-          duration: 0.1,
+          duration: 0,
         })
         .to(".header-section__navigation-menu", {
           opacity: 0,
@@ -87,15 +81,14 @@ function Header() {
           rotate: 25,
         })
         .to(".header-section__transition", {
-          top: "100vh",
+          top: "-150vh",
           duration: 0.1,
         })
         .to(".header-section__transition", {
           display: 'none',
-          duration: 0.1,
-        }, "+=0.5")
+          duration: 0,
+        })
     }
-
   }, [menu])
 
   return (
@@ -113,17 +106,9 @@ function Header() {
             className="header-section__navbar__menu"
             onClick={toShowMenu}
           >
-            {/* <Image
-              className='header-section__navbar__menu__menu-icon'
-              width={30}
-              height={20}
-              src="/icon/menu icon.png"
-              alt="menu icon"
-            /> */}
             MENU
           </div>
         </div>
-
         <div className="header-section__navigation-menu">
           <ul className="header-section__navigation-menu__links">
             {
@@ -136,28 +121,24 @@ function Header() {
               ))
             }
           </ul>
-
+          {/* 
           <Image
             className='header-section__navigation-menu__deco'
-            width={500}
-            height={400}
+            width={200}
+            height={150}
             src="/image/menu-deco.png"
             alt="decoration image"
-          />
-
+          /> */}
+          <Deco className='header-section__navigation-menu__deco' />
           <div
             onClick={toHideMenu}
             className="header-section__navigation-menu__close"
           >
             CLOSE
           </div>
-
         </div>
-
         <div className="header-section__transition"></div>
-
       </Container>
-
     </header>
   )
 }
