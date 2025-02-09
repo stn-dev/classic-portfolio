@@ -119,7 +119,7 @@ function Contact() {
 
             <div className="title-contact">
                 <svg viewBox='0 0 50 50' >
-                    <text x="50%" y="80%" fill='transparent' textAnchor='middle' >
+                    <text x="50%" y="50%" fill='transparent' textAnchor='middle' dominantBaseline='middle' >
                         CONTACT
                     </text>
                 </svg>

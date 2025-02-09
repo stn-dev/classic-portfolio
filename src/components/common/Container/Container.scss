@@ -1,5 +1,5 @@
 .container-component {
-  @apply h-fit w-full mx-auto;
+  @apply w-full mx-auto border border-white;
   max-width: 1440px;
   padding-inline: 20px;
   @screen md {
