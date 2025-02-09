@@ -1,0 +1,48 @@
+.button-component {
+  @apply w-fit h-fit py-2 px-4  text-sm rounded-md  overflow-hidden relative;
+  letter-spacing: 1px;
+  @screen md {
+    @apply py-4 px-6  text-lg rounded-lg;
+  }
+  @screen lg {
+    @apply py-4 px-6  text-xl rounded-xl;
+  }
+  @screen 2xl {
+    @apply py-4 px-8  text-2xl rounded-xl;
+  }
+  transition: all 0.3s ease-in-out;
+
+  span {
+    @apply h-[150%] absolute top-[-20%] bg-gray-300 rotate-[30deg];
+    transition: all 0.5s ease-in-out;
+  }
+
+  .reflectOne {
+    @apply w-[20%] left-[-30%];
+    transition: all 0.5s ease-in-out;
+  }
+
+  .reflectTwo {
+    @apply w-[10%] left-[-45%];
+    transition: all 1s ease-in-out;
+  }
+
+  &:hover .reflectOne {
+    left: 200%;
+  }
+  &:hover .reflectTwo {
+    left: 150%;
+  }
+}
+.contrasted {
+  @apply bg-contrasted text-dark;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.dark {
+  @apply bg-gray-900 text-contrasted;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

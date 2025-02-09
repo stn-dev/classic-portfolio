@@ -1,19 +1,20 @@
 "use client"
 import React, { useRef } from 'react'
-import './Heading.scss'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
+import './Heading.scss'
 
 interface HeadingProps {
   title: string
   titleDeco: string
   className?: string
   isInversed?: boolean
+  textFontSize?: string
 }
 
 function Heading(props: HeadingProps) {
-  const { title, titleDeco, className = '', isInversed = false } = props
+  const { title, titleDeco, className = '', isInversed = false, textFontSize = "28px" } = props
   const ref = useRef<SVGTextElement | null>(null)
 
   useGSAP(() => {
@@ -29,6 +30,7 @@ function Heading(props: HeadingProps) {
         strokeDashoffset: 0,
         duration: 2,
         delay: 0,
+        opacity: 1
       })
   }, [])
   return (
@@ -36,14 +38,15 @@ function Heading(props: HeadingProps) {
       {
         isInversed ?
           (
-            <div className={`heading-common ${className} `}>
+            <div className={`heading-common`}>
               <h2> {titleDeco} </h2>
-              <div className='svg-container' >
+              <div className={`svg-container ${className}`} >
                 <svg
                   viewBox='0 0 100 50'
                   width='100'
                   height="50"
                   fill='none'
+                  fontSize={textFontSize}
                 >
                   <text
                     x="50%"
@@ -61,9 +64,9 @@ function Heading(props: HeadingProps) {
           )
           :
           (
-            <div className={`heading-common ${className} `}>
-              <div className='svg-container' >
-                <svg viewBox='0 0 100 50' width='100' height="50" fill='none'>
+            <div className={`heading-common `}>
+              <div className={`svg-container ${className}`} >
+                <svg viewBox='0 0 100 50' width='100' height="50" fill='none' fontSize={textFontSize} >
                   <text
                     x="50%"
                     y="55%"
@@ -80,8 +83,6 @@ function Heading(props: HeadingProps) {
             </div>
           )
       }
-
-
     </>
   )
 }

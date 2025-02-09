@@ -1,0 +1,15 @@
+.input-component {
+  @apply w-full h-fit py-2 px-4 text-sm text-dark bg-neutre border-2 border-contrasted rounded-md;
+  @screen md {
+    @apply py-4 px-5 border-4 rounded-xl text-xl;
+  }
+  @screen xl {
+    @apply py-5 px-6 border-4 rounded-xl text-xl;
+  }
+  @screen 2xl {
+    @apply py-6 px-7 text-2xl border-4 rounded-2xl;
+  }
+  &::placeholder {
+    @apply text-contrasted;
+  }
+}

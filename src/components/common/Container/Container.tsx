@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react'
+import React from 'react'
 import './Container.scss'
 
 interface ContainerProps {
@@ -10,7 +10,7 @@ interface ContainerProps {
 }
 
 function Container(Props: ContainerProps) {
-  const { children, className = "", tag = "div", mouseMoveHandler, id = "" } = Props
+  const { children, className = "", tag = "section", mouseMoveHandler, id = "" } = Props
   const Tag = tag
   return (
     <Tag

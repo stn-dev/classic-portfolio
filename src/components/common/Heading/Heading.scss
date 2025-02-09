@@ -16,9 +16,9 @@
       @apply w-[450px];
     }
     svg {
-      @apply w-full h-auto text-[28px];
+      @apply w-full h-auto;
       text {
-        @apply fill-transparent stroke-1 stroke-contrasted;
+        @apply fill-transparent stroke-1 stroke-contrasted opacity-0;
         font-size: 100%;
         stroke-dasharray: 500px;
         stroke-dashoffset: 600px;

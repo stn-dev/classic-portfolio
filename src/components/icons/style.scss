@@ -16,3 +16,17 @@
     @apply w-[18px] h-[30px];
   }
 }
+.phone-icon,
+.message-icon,
+.localisation-icon {
+  @apply w-[10px] h-[10px];
+  @screen md {
+    @apply w-[17px] h-[17px];
+  }
+  @screen xl {
+    @apply w-[20px] h-[20px];
+  }
+  @screen 2xl {
+    @apply w-[25px] h-[25px];
+  }
+}
