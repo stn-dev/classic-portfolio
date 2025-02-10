@@ -1,0 +1,11 @@
+.container-component {
+  @apply w-full mx-auto;
+  max-width: 1440px;
+  padding-inline: 20px;
+  @screen md {
+    padding-inline: 40px;
+  }
+  @screen xl {
+    padding-inline: 50px;
+  }
+}

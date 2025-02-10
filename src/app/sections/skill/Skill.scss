@@ -1,240 +1,144 @@
- /* variable */
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+// "Viga", sans-serif
 
- // typeface
+@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// "Zen Loop", cursive;
 
- @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
- // "Viga", sans-serif
- 
- @import url('https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap');
- // "Zen Loop", cursive;
- 
- @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
 //  "Inria Sans", sans-serif
 
- 
- $viga: "Viga", sans-serif ;
- $zen : "Zen Loop", cursive;
- $irina : "Inria Sans", sans-serif;
- 
-  //color
-  $dark:#222831;
-  $Primary:#31363F;
-  $neutre:#EEEEEE;
-  $contrasted:#76ABAE;
- 
-  //font size
-  $title: min(12.5vw , 200px);
-  $textLigth:min(3vw , 40px);
-  $textBold:min(5vw , 50px);
-  $textBolder:min(6.25vw , 60px);
- 
-  //font weigth
- %textbold {
-     font-size: $textBold;
-     font-weight: bold;
- }
- %textBolder {
-     font-size: $textBolder;
-     font-weight: bolder;
- }
- %flex {
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
- %flexColumn {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
+$viga: "Viga", sans-serif;
+$zen: "Zen Loop", cursive;
+$irina: "Inria Sans", sans-serif;
 
- .skill-section {
-    width: 100vw;
-    min-height: 100vh;
-    @extend %flexColumn;
-    gap: 3vw;
-    padding-top: min(10vw , 150px);
+//color
+$dark: #222831;
+$Primary: #31363f;
+$neutre: #eeeeee;
+$contrasted: #76abae;
 
-    .title-skill {
-            max-width: 100vw;
-            min-height: 100px;
-            @extend %flex;
-            gap: 1.8vw;
-            svg {
-                width: 
-                min(35vw , 800px);
-                height: min(13vw , 400px);
-                text {
-                    color: transparent;
-                    stroke: $contrasted;
-                    stroke-width: 1;
-                    font-size:290%;
-                    stroke-dasharray:  600px;
-                    stroke-dashoffset: 600px;
-                    font-family: $viga;
-                }
-            }
-            h2 {
-                font-size: $title;
-                font-family: $viga;
-                color: $contrasted;
-            }
+.skill-section {
+  @apply min-h-screen flex flex-col items-center justify-center gap-4 pt-10;
+  @screen 2xl {
+    @apply gap-14 pt-24;
+  }
+
+  .skills-container {
+    @apply w-full min-h-[60vh] flex flex-col gap-5;
+    @screen md {
+      @apply gap-8;
+    }
+    @screen 2xl {
+      @apply gap-20;
     }
 
-    .skills-container {
+    .skill-container {
+      @apply w-full flex overflow-hidden relative;
 
-        width: 100vw;
-        min-height: 60vh;
-        @extend %flexColumn;
-        gap: 9.3vw;
+      mask-image: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+      );
 
-        
+      -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent,
+        $dark 20%,
+        $dark 80%,
+        transparent
+      );
 
-        .skill-container {
+      &:hover .scroller {
+        animation-play-state: paused;
+      }
 
-            width: min(90vw , 1000px);
-            display: flex;
-            overflow: hidden;
-            position: relative; 
+      .scroller {
+        white-space: nowrap;
+        animation: scrollSkillCore var(--myScrollStyle) linear infinite;
+        animation-delay: calc(var(--myScrollStyle) * -1);
 
-            mask-image: linear-gradient(90deg , transparent , white 20% , white 80% , transparent );
+        .skill {
+          @apply w-[130px] h-[90px] relative inline-flex overflow-hidden m-1;
+          @screen md {
+            @apply w-[200px] h-[130px];
+          }
+          @screen lg {
+            @apply w-[250px] h-[170px] m-2;
+          }
+          @screen xl {
+            @apply w-[280px] h-[190px];
+          }
+          @screen 2xl {
+            @apply w-[310px] h-[205px];
+          }
 
-            -webkit-mask-image : linear-gradient(90deg , transparent , $dark 20% , $dark 80% , transparent );
-            
+          &:hover .hoverEffect {
+            @apply w-full opacity-100;
+          }
+          img {
+            @apply w-full h-full;
+          }
 
-            &:hover .scroller {
-                animation-play-state: paused;
-            }
-
-            .scroller {
-
-                white-space: nowrap;
-                animation: scrollSkillCore var(--myScrollStyle) linear infinite;
-                animation-delay: calc(var(--myScrollStyle) * -1);
-
-                .skill {
-                    width: min(32vw , 310px);
-                    height: min(21.3vw , 205px);
-                    position: relative;
-                    display: inline-flex;
-                    margin: 5px;
-                    overflow: hidden;
-    
-                    &:hover .hoverEffect {
-                        width: 100%;
-                        opacity: 1;
-                    }
-        
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    .hoverEffect {
-                        height: 100%;
-                        width: 0;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: $contrasted;
-                        color: $dark;
-                        @extend %textbold;
-                        @extend %flex;
-                        opacity: 0;
-                        border-radius: min(1.8vw , 18px);
-                        transition: all 0.5s ease-in-out;
-                    }              
-        
-                };
-
-                @keyframes scrollSkillCore {
-                    0% {
-                        transform: translateX(100%);
-                    }
-                    100% {
-                        transform: translateX(-100%);
-                    }
-                }
-    
-            }
-            
-            .scroller2 {
-                animation: scrollSkill2 var(--myScrollStyle) linear infinite;
-                animation-delay: calc(var(--myScrollStyle) / -2);
-            }
-
-            @keyframes scrollSkill2 {
-                0% {
-                    transform: translateX(0);
-                };
-                100% {
-                    transform: translateX(-200%);
-                }
-            }
-
+          .hoverEffect {
+            @apply h-full w-0 absolute top-0 left-0 bg-contrasted opacity-0 rounded-2xl flex items-center justify-center text-dark text-4xl font-semibold;
+            transition: all 0.5s ease-in-out;
+          }
         }
 
-        h4 {
-            @extend %textbold;
-            color: $neutre;
-           }
-
-        .core-part {
-            width: 100%;
-            min-height: 10vw;
-            @extend %flexColumn;
-            gap: 3vw;
-            
-                    
+        @keyframes scrollSkillCore {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
         }
+      }
 
-        .tools-part {
-            @extend .core-part;  
+      .scroller2 {
+        animation: scrollSkill2 var(--myScrollStyle) linear infinite;
+        animation-delay: calc(var(--myScrollStyle) / -2);
+      }
 
+      @keyframes scrollSkill2 {
+        0% {
+          transform: translateX(0);
         }
-
-        .framework-part {
-            @extend .core-part;              
+        100% {
+          transform: translateX(-200%);
         }
+      }
     }
 
- }
-
-
- @media screen and (min-width:1280px) {
-
-    $title: min(8vw , 200px);
-    $textLigth:min(1.2vw , 25px);
-    $textBold:min(1.8vw , 30px);
-    $textBolder:min(6.25vw , 50px);
-
-    .skill-section {
-
-        .title-skill {
-            svg {
-                width: min(25vw , 600px);
-                height: min(9vw , 300px);
-                text {
-                    font-size: 270%;
-                }
-            }
-             
-            h2 {
-                font-size: $title;
-            }
-        }
-
-        .skills-container {
-            gap: 7vw;
-
-            h4 {
-                font-size: $textBold;
-                font-weight: bold;
-            }
-        }
+    h4 {
+      @apply text-neutre text-sm font-bold;
+      @screen md {
+        @apply text-lg;
+      }
+      @screen lg {
+        @apply text-xl;
+      }
+      @screen xl {
+        @apply text-2xl;
+      }
     }
- }
 
+    .core-part {
+      @apply w-full h-fit py-3 flex flex-col items-center justify-center gap-5;
+      @screen 2xl {
+        @apply gap-5;
+      }
+    }
 
- 
+    .tools-part {
+      @extend .core-part;
+    }
+
+    .framework-part {
+      @extend .core-part;
+    }
+  }
+}

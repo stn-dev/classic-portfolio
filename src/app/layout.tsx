@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import { url } from "inspector";
-
 
 export const metadata: Metadata = {
   title: "stn | portfolio",
-  description: "This is my personal portfolio as a front-end developer",
+  description: "This is my personal portfolio as a front-end developer , you can see a part of my world, my skills and contact me directly here",
   openGraph: {
     title: "stn dev portfolio",
-    description: 'This is my personal portfolio as a front-end developer',
+    description: 'This is my personal portfolio as a front-end developer , you can see a part of my world, my skills and contact me directly here',
     url: "http://stn-portfolio.vercel.app",
     type: "website",
     locale: "mg-MADAGASCAR",
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "stn | portfolio",
-    description: "This is my personal portfolio as a front-end developer",
+    description: "This is my personal portfolio as a front-end developer , you can see a part of my world, my skills and contact me directly here",
     images: ["http://stn-portfolio.vercel.app/image/opengraph-image.png"],
   },
 };
@@ -38,7 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );

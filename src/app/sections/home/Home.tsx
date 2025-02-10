@@ -1,116 +1,105 @@
 "use client"
-
 import React, { useEffect, useState } from 'react'
+import { DimensionType, OffsetType } from './type'
+import { scrowlDownLetterData, socialMediaData } from './data'
+import Link from 'next/link'
+import Icon from '@/components/icons'
+import Image from 'next/image'
+import Container from '@/components/common/Container/Container'
 import './Home.scss'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
+
 
 function Home() {
-    const [x, setX] = useState(0)
-    const [y, setY] = useState(0)
-    const [offsetX, setOffsetX] = useState(0)
-    const [offsetY, setOffsetY] = useState(0)
-    const [width, setWidth] = useState(0)
-    const [height, setHeight] = useState(0)
+  const [offset, setOffset] = useState<OffsetType>({ offsetX: 0, offsetY: 0 })
+  const [dimension, setDimension] = useState<DimensionType>({ width: 0, height: 0 })
+  let x: number;
+  let y: number;
 
-    const catchPosition = (e: React.MouseEvent) => {
+  const catchPosition = (e: React.MouseEvent) => {
+    x = e.clientX;
+    y = e.clientY;
+    setOffset({
+      offsetX: ((x - dimension.width) / dimension.width) * 30,
+      offsetY: -1 * (((y - dimension.height) / dimension.height) * 30)
+    })
+  }
+  useEffect(() => {
+    setDimension({ width: window.innerWidth / 2, height: window.innerHeight / 2 })
+  }, [dimension.height, dimension.width])
 
-        setX(e.clientX)
-        setY(e.clientY)
+  return (
 
-        setOffsetX(((x - width) / width) * 30)
-        setOffsetY(-1 * (((y - height) / height) * 30))
-
-    }
-
-    useEffect(() => {
-        setWidth(window.innerWidth / 2)
-        setHeight(window.innerHeight / 2)
-    }, [x, y])
-
-
-
-    // useGSAP(() => {
-
-    //     gsap.registerPlugin(ScrollTrigger)
-    //     const timeline = gsap.timeline()
-
-    //     timeline
-    //         .from(".home-section .big-text", {
-    //             yPercent: -10,
-    //             opacity: 0,
-    //             color: 'red'
-    //         })
-    //         .from(".imageOnHero", {
-    //             yPercent: -10,
-    //             opacity: 0,
-    //         })
-    //         .from(".social-media", {
-    //             left: "-5.3vw",
-    //             opacity: 0
-    //         })
-    //         .from(".scroll-indication", {
-    //             right: "-5.3vw",
-    //             opacity: 0
-    //         })
-
-
-    // }, [])
-
-    return (
-        <section
-            className="home-section"
-            id='home'
-            onMouseMove={catchPosition}
-        >
-            <div className="big-text">
-                <p>I&apos;M</p>
-                <h1>MARIO</h1>
-                <h3>
-                    <span>
-                        FRONT-END
-                    </span>
-                    <span>
-                        DEVELOPER
-                    </span>
-                </h3>
-            </div>
-
-            <div className="social-media">
-                <a href="https://www.facebook.com/stn.raf.9" target="_blank" >
-                    <img src="/icon/facebook.png" alt="faccebook icon" />
-                </a>
-
-                <a href="https://www.instagram.com/rafstn/" target='_blank'>
-                    <img src="/icon/insta.png" alt="instagram icon" />
-                </a>
-
-                <a href="https://web.whatsapp.com/" target="_blank" >
-                    <img src="/icon/whatsapp.png" alt="whatsapp icon" />
-                </a>
-                <hr />
-            </div>
-
-            <div className="imageOnHero" >
-                <img src="/image/heroImageOnMobile2.png" alt="" />
-            </div>
-
-            <div
-                className="image2onHero"
-
-                style={{ transform: `rotateX(${offsetY}deg) rotateY(${offsetX}deg)` }}
+    <Container
+      className="home-section"
+      id='home'
+      mouseMoveHandler={catchPosition}
+    >
+      <div className="home-section__social-media">
+        {
+          socialMediaData.map((logo, id) => (
+            <Link
+              href={logo.href}
+              key={`social--${id}`}
+              target='_blank'
             >
-                <img src="/image/heroImageOndesktop.png" alt="" />
-            </div>
+              <Icon name={logo.icon} />
+            </Link>
+          ))
+        }
+        <hr />
+      </div>
 
-            <div className="scroll-indication">
-                <p>SCROLL</p>
-                <p> DONW</p>
-                <img src="/icon/arrowDown.png" alt="arrowdown icon" />
-            </div>
-        </section>
-    )
+      <div className='home-section__center'>
+        <div
+          className="home-section__center__image2onHero"
+          style={{ transform: `rotateX(${offset.offsetY}deg) rotateY(${offset.offsetX}deg)` }}
+        >
+          <Image
+            alt='profile image'
+            src={'/image/imageOnHeroDesktop.png'}
+            width={800}
+            height={1000}
+          />
+        </div>
+
+        <div className="home-section__center__imageOnHero" >
+          <Image
+            src={"/image/heroImageOnMobile2.png"}
+            alt='profile image'
+            width={300}
+            height={450}
+          />
+        </div>
+
+        <div className="home-section__center__big-text">
+          <p>I&apos;M</p>
+          <h1>MARIO</h1>
+          <h3>
+            <span>FRONT-END </span>
+            <span> DEVELOPER</span>
+          </h3>
+        </div>
+      </div>
+
+      <div className="home-section__scroll-indication">
+        <div className='home-section__scroll-indication__text1'>
+          {
+            scrowlDownLetterData.scrowl.map((letter, id) => (
+              <span key={id} > {letter.letter} </span>
+            ))
+          }
+        </div>
+        <div className='home-section__scroll-indication__text2'>
+          {
+            scrowlDownLetterData.down.map((letter, id) => (
+              <span key={id} > {letter.letter} </span>
+            ))
+          }
+        </div>
+        <Icon name='arrowDwon' />
+      </div>
+    </Container>
+  )
 }
 
 export default Home
