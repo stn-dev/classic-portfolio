@@ -38,9 +38,9 @@ function Heading(props: HeadingProps) {
       {
         isInversed ?
           (
-            <div className={`heading-common`}>
+            <div className={`heading-common ${className}`}>
               <h2> {titleDeco} </h2>
-              <div className={`svg-container ${className}`} >
+              <div className={`svg-container `} >
                 <svg
                   viewBox='0 0 100 50'
                   width='100'
@@ -64,8 +64,8 @@ function Heading(props: HeadingProps) {
           )
           :
           (
-            <div className={`heading-common `}>
-              <div className={`svg-container ${className}`} >
+            <div className={`heading-common ${className} `}>
+              <div className={`svg-container`} >
                 <svg viewBox='0 0 100 50' width='100' height="50" fill='none' fontSize={textFontSize} >
                   <text
                     x="50%"

@@ -1,7 +1,7 @@
-import React, { LegacyRef } from 'react'
+import React, { TextareaHTMLAttributes } from 'react'
 import './Textarea.scss'
 
-interface TextAreaProps {
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string
   placeholder: string
   ref?: React.ForwardedRef<HTMLTextAreaElement>

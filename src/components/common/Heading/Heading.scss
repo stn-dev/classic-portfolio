@@ -1,8 +1,8 @@
 .heading-common {
-  @apply w-fit h-fit flex items-center justify-center gap-2;
-  @screen xl {
-    @apply gap-5;
-  }
+  @apply w-fit h-fit flex items-center justify-center;
+  // @screen xl {
+  //   @apply gap-5;
+  // }
 
   .svg-container {
     @apply w-[150px] h-auto;
@@ -29,15 +29,15 @@
     }
   }
   h2 {
-    @apply text-[40px] text-contrasted;
+    @apply text-[44px] text-contrasted w-fit;
     @screen md {
       @apply text-[73px];
     }
     @screen xl {
-      @apply text-[85px];
+      @apply text-[87px];
     }
     @screen 2xl {
-      @apply text-[125px];
+      @apply text-[130px];
     }
   }
 }

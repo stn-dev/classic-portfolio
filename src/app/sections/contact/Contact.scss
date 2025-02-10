@@ -17,18 +17,29 @@ $irina: "Inria Sans", sans-serif;
   @apply min-h-screen flex flex-col items-center justify-center gap-5 pt-14 mb-28;
 
   .contact-heading {
-    @apply w-[180px];
-    @screen sm {
-      @apply w-[320px];
+    .svg-container {
+      @apply w-[180px];
+      @screen sm {
+        @apply w-[320px];
+      }
+      @screen xl {
+        @apply w-[380px];
+      }
+      @screen 2xl {
+        @apply w-[580px];
+      }
     }
-    @screen xl {
-      @apply w-[380px];
-    }
-    @screen 2xl {
-      @apply w-[580px];
-    }
-    svg {
-      @apply pb-[5px];
+    h2 {
+      @apply text-[40px] w-fit;
+      @screen md {
+        @apply text-[65px];
+      }
+      @screen xl {
+        @apply text-[78px];
+      }
+      @screen 2xl {
+        @apply text-[120px];
+      }
     }
   }
 

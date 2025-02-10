@@ -20,7 +20,6 @@ $irina: "Inria Sans", sans-serif;
     @screen lg {
       @apply flex flex-row-reverse gap-14;
     }
-
     &__image {
       @apply w-[200px] h-[250px];
       @screen md {
@@ -37,10 +36,11 @@ $irina: "Inria Sans", sans-serif;
     &__text {
       @apply w-full h-fit text-neutre text-sm font-light;
       line-height: 25px;
-      letter-spacing: 2px;
+      letter-spacing: 0.5px;
       @screen md {
         @apply text-lg;
         line-height: 30px;
+        letter-spacing: 1px;
       }
       @screen xl {
         @apply text-xl;
