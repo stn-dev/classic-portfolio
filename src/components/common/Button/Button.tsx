@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import './Button.scss'
+import Link from 'next/link'
 
-interface ButtonPorps {
+interface ButtonPorps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string
   className?: string
   variant: 'contrasted' | 'dark'
+  IsForDownload?: boolean
+  link?: string
 }
 function Button(props: ButtonPorps) {
   const { label, className = '', variant } = props

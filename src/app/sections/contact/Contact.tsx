@@ -12,10 +12,6 @@ import './Contact.scss'
 import Icon from '@/components/icons';
 import { informationData } from './data';
 
-type SendMail = (e: React.FormEvent) => void
-
-// service_56bza87  template_8phdps8  Y55U-eVuDLLpHV7wh
-
 function Contact() {
 
   const nameRef = useRef<HTMLInputElement | null>(null)
@@ -23,8 +19,7 @@ function Contact() {
   const messageRef = useRef<HTMLTextAreaElement | null>(null)
   const formRef = useRef<HTMLFormElement | null>(null)
 
-  const sendMail: SendMail = (e) => {
-
+  const sendMail = (e: React.FormEvent) => {
     let name = nameRef.current?.value
     let email = mailRef.current?.value
     let message = messageRef.current?.value
@@ -94,30 +89,6 @@ function Contact() {
     }
 
   }
-
-  // useGSAP(() => {
-  //   gsap.registerPlugin(ScrollTrigger)
-
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".contact-section",
-  //       start: "top 50%",
-  //       end: "bottom 60%",
-  //       toggleActions: "play none none reverse",
-  //     }
-  //   })
-
-  //   tl
-  //     .to(".title-contact svg text", {
-  //       strokeDashoffset: 0,
-  //       duration: 1.5,
-  //       delay: 0
-  //     })
-
-  // }, [])
-
-
-
   return (
     <Container className="contact-section" id='contact'>
       <Heading
@@ -126,16 +97,6 @@ function Contact() {
         textFontSize='20px'
         className='contact-heading'
       />
-
-      {/* <div className="title-contact">
-        <svg viewBox='0 0 50 50' >
-          <text x="50%" y="50%" fill='transparent' textAnchor='middle' dominantBaseline='middle' >
-            CONTACT
-          </text>
-        </svg>
-        <h2>ME</h2>
-      </div> */}
-
       <div className="form-part-container">
 
         <div className="title-and-form">
@@ -143,7 +104,6 @@ function Contact() {
           <div className="form-part-title">
             GET IN TOUCH? SEND ME AN <span>E-MAIL</span> OR CONTACT MY <span>WHATSAPP</span>
           </div>
-
 
           <form
             className="formulaire"
@@ -166,34 +126,10 @@ function Contact() {
               placeholder='MESSAGE'
               ref={messageRef}
             />
-            {/* <input
-                            name='message'
-                            placeholder='MESSAGE'
-                            ref={messageRef}
-                        />
-                        <input
-                            type="text"
-                            name='email'
-                            placeholder='E-MAIL'
-                            ref={mailRef}
-                        />
-                        <textarea
-                            name="message"
-                            placeholder='MESSAGE'
-                            ref={messageRef}
-                        >
-
-                        </textarea> */}
-
             <Button label='SUBMIT' variant='contrasted' />
           </form>
 
         </div>
-
-
-
-
-
         <div className="informations">
           {
             informationData.map((info, id) => (
@@ -203,26 +139,8 @@ function Contact() {
               </div>
             ))
           }
-          {/* <div className="mail">
-            <Icon name='message' />
-            <p>mariosantatra@gmail.com</p>
-          </div>
-
-          <div className="phone">
-            <Icon name='phone' />
-
-            <p>+261 38 82 090 64</p>
-          </div>
-
-          <div className="localisation">
-            <Icon name='localisation' />
-
-            <p>Madagascar / Tana</p>
-          </div> */}
         </div>
-
       </div>
-
     </Container>
   )
 }

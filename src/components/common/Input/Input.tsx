@@ -5,7 +5,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type?: "text" | "password" | "email"
   name: string
   placeholder: string
-  ref?: React.ForwardedRef<HTMLInputElement>
+  ref?: React.LegacyRef<HTMLInputElement>
   clasName?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 

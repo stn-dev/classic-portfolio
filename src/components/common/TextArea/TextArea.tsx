@@ -4,7 +4,7 @@ import './Textarea.scss'
 interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string
   placeholder: string
-  ref?: React.ForwardedRef<HTMLTextAreaElement>
+  ref?: React.LegacyRef<HTMLTextAreaElement>
   clasName?: string
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
