@@ -84,10 +84,8 @@ function Contact() {
             }
           )
       }
-
       return
     }
-
   }
   return (
     <Container className="contact-section" id='contact'>
@@ -98,9 +96,7 @@ function Contact() {
         className='contact-heading'
       />
       <div className="form-part-container">
-
         <div className="title-and-form">
-
           <div className="form-part-title">
             GET IN TOUCH? SEND ME AN <span>E-MAIL</span> OR CONTACT MY <span>WHATSAPP</span>
           </div>

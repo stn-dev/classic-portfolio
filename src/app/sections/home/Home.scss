@@ -1,15 +1,15 @@
-/* variable */
+// /* variable */
 
-// typeface
+// // typeface
 
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-// "Viga", sans-serif
+// @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+// // "Viga", sans-serif
 
-@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Zen Loop", cursive;
+// @import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// // "Zen Loop", cursive;
 
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Inria Sans", sans-serif
+// @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// // "Inria Sans", sans-serif
 
 $viga: "Viga", sans-serif;
 $zen: "Zen Loop", cursive;
@@ -38,12 +38,6 @@ $contrasted: #76abae;
 
     &__big-text {
       @apply w-fit h-fit flex flex-col text-neutre items-start;
-      @screen md {
-      }
-
-      @screen xl {
-      }
-
       p {
         @apply text-sm;
         font-family: $zen;

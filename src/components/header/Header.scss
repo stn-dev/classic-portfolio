@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-// "Viga", sans-serif
+// @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+// // "Viga", sans-serif
 
-@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Zen Loop", cursive;
+// @import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// // "Zen Loop", cursive;
 
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Inria Sans", sans-serif
+// @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// // "Inria Sans", sans-serif
 
 $viga: "Viga", sans-serif;
 $zen: "Zen Loop", cursive;
@@ -13,7 +13,7 @@ $irina: "Inria Sans", sans-serif;
 
 /* header section */
 .header-section {
-  @apply w-full h-fit fixed z-10 bg-Primarmy;
+  @apply w-full h-fit fixed z-10 bg-transparent;
 
   &__navbar {
     @apply w-full h-fit flex items-center justify-between z-30 py-[5px];
@@ -68,7 +68,7 @@ $irina: "Inria Sans", sans-serif;
           @apply text-9xl;
         }
         a {
-          font-family: $viga;
+          font-family: "Viga", sans-serif;
           transition: all 0.2s ease-in-out;
           &:hover {
             color: transparent;

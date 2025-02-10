@@ -1,6 +1,5 @@
 
 import Home from "./sections/home/Home";
-import Header from "@/components/header/Header";
 import About from "./sections/about/About";
 import Skill from "./sections/skill/Skill";
 import Contact from "./sections/contact/Contact";
@@ -10,7 +9,6 @@ export default function pageContainer() {
 
   return (
     <main className="layout-container"  >
-      <Header />
       <Home />
       <About />
       <Skill />

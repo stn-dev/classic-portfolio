@@ -1,58 +1,31 @@
-/* variable */
+// /* variable */
 
-// typeface
+// // typeface
 
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-// "Viga", sans-serif
+// @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+// // "Viga", sans-serif
 
-@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Zen Loop", cursive;
+// @import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// // "Zen Loop", cursive;
 
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-//  "Inria Sans", sans-serif
+// @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
+// //  "Inria Sans", sans-serif
 
 $viga: "Viga", sans-serif;
 $zen: "Zen Loop", cursive;
 $irina: "Inria Sans", sans-serif;
 
-//color
-$dark: #222831;
-$Primary: #31363f;
-$neutre: #eeeeee;
-$contrasted: #76abae;
-
-//font size
-$title: min(12.5vw, 200px);
-$textLigth: min(3vw, 40px);
-$textBold: min(5vw, 50px);
-$textBolder: min(6.25vw, 60px);
-
-//font weigth
-%textbold {
-  font-size: $textBold;
-  font-weight: bold;
-}
-%textBolder {
-  font-size: $textBolder;
-  font-weight: bolder;
-}
-%flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-%flexColumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .fixed-button {
-  @apply w-fit h-fit text-nowrap p-2 fixed bottom-[4vh] flex gap-1 z-[5] rounded-md bg-gray-700;
+  @apply w-fit h-fit text-nowrap p-2 fixed bottom-[4vh] flex gap-2 z-[5] rounded-md bg-gray-700;
   left: 50%;
   transform: translateX(-50%);
   transition: all 0.3s ease-in-out;
+  @screen md {
+    @apply gap-3 rounded-xl;
+  }
+  @screen 2xl {
+    @apply gap-4 rounded-2xl p-3;
+  }
 }
 
 .hiddenButton {
