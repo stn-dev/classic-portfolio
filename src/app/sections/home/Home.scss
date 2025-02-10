@@ -48,26 +48,45 @@ $contrasted: #76abae;
         @apply text-sm;
         font-family: $zen;
         @screen md {
-          @apply text-lg;
+          @apply text-xl;
+        }
+        @screen lg {
+          @apply text-xl;
         }
         @screen xl {
-          @apply text-xl;
+          @apply text-2xl;
+        }
+        @screen 2xl {
+          @apply text-4xl;
         }
       }
       h1 {
-        @apply text-4xl;
+        @apply text-[53px];
+        line-height: 1;
         font-family: $viga;
         @screen md {
           @apply text-6xl;
+        }
+        @screen xl {
+          @apply text-[79px];
+        }
+        @screen 2xl {
+          @apply text-[105px];
         }
       }
       h3 {
         @apply flex flex-col;
         span {
-          @apply text-2xl;
+          @apply text-5xl;
           font-family: $zen;
           @screen md {
-            @apply text-4xl;
+            @apply text-[55px];
+          }
+          @screen xl {
+            @apply text-7xl;
+          }
+          @screen 2xl {
+            @apply text-8xl;
           }
         }
       }
@@ -86,14 +105,14 @@ $contrasted: #76abae;
     }
 
     &__image2onHero {
-      @apply w-[400px] h-[550px] mt-[15vh] relative hidden;
+      @apply w-[350px] h-[450px] mt-[15vh] relative hidden;
       @screen lg {
         @apply block;
       }
       transform-style: preserve-3d;
       transform: perspective(5000px);
       @screen 2xl {
-        @apply block  w-[550px] h-[700px] mt-[15vh];
+        @apply block  w-[500px] h-[650px] mt-[15vh];
       }
 
       &::before {
