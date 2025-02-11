@@ -1,8 +1,6 @@
+$viga: "Viga", sans-serif;
 .heading-common {
   @apply w-fit h-fit flex items-center justify-center;
-  // @screen xl {
-  //   @apply gap-5;
-  // }
 
   .svg-container {
     @apply w-[150px] h-auto;
@@ -20,6 +18,7 @@
       text {
         @apply fill-transparent stroke-1 stroke-contrasted opacity-0;
         font-size: 100%;
+        font-family: $viga;
         stroke-dasharray: 500px;
         stroke-dashoffset: 600px;
         @screen md {
@@ -30,6 +29,7 @@
   }
   h2 {
     @apply text-[44px] text-contrasted w-fit;
+    font-family: $viga;
     @screen md {
       @apply text-[73px];
     }

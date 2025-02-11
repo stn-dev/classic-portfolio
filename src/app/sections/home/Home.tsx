@@ -59,6 +59,7 @@ function Home() {
             src={'/image/imageOnHeroDesktop.png'}
             width={800}
             height={1000}
+            loading='eager'
             priority
           />
         </div>

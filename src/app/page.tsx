@@ -8,12 +8,12 @@ import FixedButton from "@/components/fixedButton/fixedButon";
 export default function pageContainer() {
 
   return (
-    <main className="layout-container"  >
+    <>
       <Home />
       <About />
       <Skill />
       <Contact />
       <FixedButton />
-    </main>
+    </>
   );
 }
