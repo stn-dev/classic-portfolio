@@ -6,17 +6,14 @@ import gsap from 'gsap'
 import headerLinks from './data'
 import Link from 'next/link'
 import Container from '../common/Container/Container'
-import Image from 'next/image'
-import './Header.scss'
 import Deco from '../icons/Deco'
 import Icon from '../icons'
-
-type Menufunction = () => void
+import './Header.scss'
 
 function Header() {
   const [menu, setMenu] = useState<boolean>(false)
-  const toHideMenu: Menufunction = () => setMenu(false)
-  const toShowMenu: Menufunction = () => setMenu(true)
+  const toHideMenu = () => setMenu(false)
+  const toShowMenu = () => setMenu(true)
 
   useGSAP(() => {
     const tl1 = gsap.timeline()
@@ -98,13 +95,6 @@ function Header() {
     <header className='header-section' >
       <Container>
         <div className="header-section__navbar">
-          {/* <Image
-            className='header-section__navbar__logo'
-            width={80}
-            height={25}
-            src="/icon/logo.png"
-            alt="logo icon"
-          /> */}
           <Icon name='logo' />
           <div
             className="header-section__navbar__menu"

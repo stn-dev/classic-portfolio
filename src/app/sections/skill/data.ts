@@ -1,6 +1,6 @@
-const scrollStyle1 = { "--myScrollStyle": "15s" } as React.CSSProperties;
-const scrollStyle2 = { "--myScrollStyle": "12s" } as React.CSSProperties;
-const scrollStyle3 = { "--myScrollStyle": "8s" } as React.CSSProperties;
+const scrollStyle1 = { "--myScrollStyle": "20s" } as React.CSSProperties;
+const scrollStyle2 = { "--myScrollStyle": "18s" } as React.CSSProperties;
+const scrollStyle3 = { "--myScrollStyle": "16s" } as React.CSSProperties;
 type TextType =
   | "JAVASCRIPT"
   | "CSS"
