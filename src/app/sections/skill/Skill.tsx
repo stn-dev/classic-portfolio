@@ -8,7 +8,7 @@ import './Skill.scss'
 function Skill() {
   return (
     <Container className="skill-section" id="skill">
-      <Heading title='SKILL' titleDeco='MY' isInversed={true} className='skill' />
+      <Heading title='SKILL' titleDeco='MY' isInversed={true} />
       <div className="skills-container"  >
         <div className="core-part">
           <h4>{core.title}</h4>

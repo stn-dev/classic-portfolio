@@ -21,7 +21,16 @@
   }
 
   .hoverEffect {
-    @apply h-full w-0 absolute top-0 left-0 bg-contrasted opacity-0 rounded-2xl flex items-center justify-center text-dark text-4xl font-semibold;
+    @apply h-full w-0 absolute top-0 left-0 bg-contrasted opacity-0 rounded-md flex items-center justify-center text-dark text-xl font-semibold;
     transition: all 0.5s ease-in-out;
+    @screen md {
+      @apply text-2xl rounded-lg;
+    }
+    @screen lg {
+      @apply text-3xl rounded-xl;
+    }
+    @screen 2xl {
+      @apply text-4xl rounded-2xl;
+    }
   }
 }
