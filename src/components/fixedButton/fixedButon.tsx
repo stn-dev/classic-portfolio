@@ -8,11 +8,6 @@ function FixedButton() {
   let lastY = 0
   const controlNavbar = () => {
     window.scrollY > lastY ? setShowButton(true) : setShowButton(false)
-    // if (window.scrollY > lastY) {
-    //   setShowButton(true)
-    // } else {
-    //   setShowButton(false)
-    // }
     lastY = window.scrollY
   }
 
@@ -21,14 +16,16 @@ function FixedButton() {
     return () => {
       window.removeEventListener('scroll', controlNavbar)
     }
-  }, [])
+  })
 
   return (
     <div className={`fixed-button ${showButton ? "hiddenButton" : ""}`}>
       <a href="/image/developerCV.png" download={"test"}>
         <Button label='DOWNLOAD CV' variant='contrasted' />
       </a>
-      <Button label='CONTACT ME' variant='dark' />
+      <a href="#contact">
+        <Button label='CONTACT ME' variant='dark' />
+      </a>
     </div>
   )
 }

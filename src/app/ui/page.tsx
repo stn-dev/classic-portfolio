@@ -1,5 +1,5 @@
 import FormContact from '@/components/Form/FormContact'
-import Header from '@/components/header/Header'
+import Header from '@/components/Header/Header'
 import React from 'react'
 
 function Gui() {

@@ -57,9 +57,9 @@ function FormContact() {
           },
           function (error) {
             Swal.fire({
-              icon: "error",
+              icon: "question",
               title: "Oops...",
-              text: "An error was occured\nPlease check your network",
+              text: "An error occured! Please check your network",
             });
             console.log("error is " + error)
             return
