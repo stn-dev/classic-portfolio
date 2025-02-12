@@ -38,6 +38,7 @@ function FormContact() {
         icon: "error",
         title: "Oops...",
         text: "Please, make sure to fill all the field",
+        scrollbarPadding: false,
       });
       setLoad(false)
       return
@@ -51,6 +52,7 @@ function FormContact() {
               icon: "success",
               title: "OK",
               text: "Message send successfully",
+              scrollbarPadding: false,
             });
             setName('')
             setEmail('')
@@ -63,6 +65,7 @@ function FormContact() {
               icon: "question",
               title: "Oops...",
               text: "An error occured! Please check your network",
+              scrollbarPadding: false,
             });
             console.log("error is " + error)
             setLoad(false)

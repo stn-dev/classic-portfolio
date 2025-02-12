@@ -2,8 +2,8 @@ import React from 'react'
 import Heading from '@/components/common/Heading/Heading'
 import Image from 'next/image'
 import Container from '@/components/common/Container/Container'
-import './About.scss'
 import Link from 'next/link'
+import './About.scss'
 
 function About() {
   return (
