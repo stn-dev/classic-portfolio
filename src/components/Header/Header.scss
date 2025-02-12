@@ -1,42 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-// "Viga", sans-serif
-
-@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Zen Loop", cursive;
-
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Inria Sans", sans-serif
-
 $viga: "Viga", sans-serif;
 $zen: "Zen Loop", cursive;
 $irina: "Inria Sans", sans-serif;
 
-/* header section */
 .header-section {
-  @apply w-full h-fit fixed z-10 bg-Primarmy;
+  @apply w-full h-fit fixed z-10 bg-transparent;
 
   &__navbar {
-    @apply w-full h-fit flex items-center justify-between z-30 py-[10px];
+    @apply w-full h-fit flex items-center justify-between z-30 py-[5px];
     @screen md {
       @apply py-[20px];
     }
 
-    &__logo {
-      @screen md {
-        @apply w-[120px] h-[35px];
-      }
-      @screen xl {
-        @apply w-[130px] h-[40px];
-      }
-    }
-
     &__menu {
-      @apply text-sm text-contrasted;
+      @apply text-sm text-contrasted mix-blend-difference;
       @screen md {
-        @apply text-lg font-semibold;
+        @apply text-xl font-semibold;
       }
       @screen xl {
-        @apply text-xl font-semibold;
+        @apply text-2xl font-semibold;
       }
       &:hover {
         cursor: pointer;
@@ -93,9 +74,16 @@ $irina: "Inria Sans", sans-serif;
       @screen md {
         @apply w-[300px] h-[300px];
       }
+      @screen xl {
+        @apply w-[350px] h-[350px];
+      }
+      @screen 2xl {
+        @apply w-[450px] h-[450px];
+      }
     }
     &__close {
       @apply w-fit h-fit text-neutre text-sm absolute right-[20px] top-[30px];
+      font-family: $viga;
       @screen md {
         @apply text-lg right-[30px] top-[50px];
       }
@@ -115,6 +103,6 @@ $irina: "Inria Sans", sans-serif;
     }
   }
   &__transition {
-    @apply w-screen h-screen bg-Primarmy absolute z-20 top-[-150vh] left-[40%] rotate-[25deg];
+    @apply w-[10vw] h-screen bg-Primarmy absolute z-20 top-[-150vh] left-[40%] rotate-[25deg];
   }
 }

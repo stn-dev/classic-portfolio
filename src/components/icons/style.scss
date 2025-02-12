@@ -30,3 +30,13 @@
     @apply w-[25px] h-[25px];
   }
 }
+
+.logo-icon {
+  @apply w-[90px];
+  @screen md {
+    @apply w-[150px];
+  }
+  @screen xl {
+    @apply w-[170px];
+  }
+}

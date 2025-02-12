@@ -1,0 +1,12 @@
+.formulaire {
+  @apply w-full h-fit flex flex-col place-items-start justify-center gap-3;
+  @screen md {
+    @apply gap-5 max-w-[80%];
+  }
+  @screen xl {
+    @apply gap-5 max-w-[50%];
+  }
+  .error {
+    @apply border-red-500;
+  }
+}

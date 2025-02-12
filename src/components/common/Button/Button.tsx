@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import './Button.scss'
 
-interface ButtonPorps {
+interface ButtonPorps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string
   className?: string
   variant: 'contrasted' | 'dark'
+  isDisabled?: boolean
 }
 function Button(props: ButtonPorps) {
-  const { label, className = '', variant } = props
+  const { label, className = '', variant, isDisabled = false } = props
   return (
     <button
-      className={`button-component ${variant} ${className}`} >
+      className={`button-component ${variant} ${isDisabled ? 'disabled' : ''} ${className}`}
+      disabled={isDisabled}
+    >
       {label}
-      <span className='reflectOne' ></span>
-      <span className='reflectTwo' ></span>
+      <span className='reflectOne'></span>
+      <span className='reflectTwo'></span>
     </button>
   )
 }

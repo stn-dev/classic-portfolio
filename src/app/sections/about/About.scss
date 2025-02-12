@@ -1,18 +1,3 @@
-// typeface
-
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-// "Viga", sans-serif
-
-@import url("https://fonts.googleapis.com/css2?family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Zen Loop", cursive;
-
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Viga&family=Zen+Loop:ital@0;1&display=swap");
-// "Inria Sans", sans-serif
-
-$viga: "Viga", sans-serif;
-$zen: "Zen Loop", cursive;
-$irina: "Inria Sans", sans-serif;
-
 .about-section {
   @apply min-h-screen py-0 flex flex-col gap-10 items-center justify-center;
   &__image-and-text {
@@ -20,7 +5,6 @@ $irina: "Inria Sans", sans-serif;
     @screen lg {
       @apply flex flex-row-reverse gap-14;
     }
-
     &__image {
       @apply w-[200px] h-[250px];
       @screen md {
@@ -37,10 +21,11 @@ $irina: "Inria Sans", sans-serif;
     &__text {
       @apply w-full h-fit text-neutre text-sm font-light;
       line-height: 25px;
-      letter-spacing: 2px;
+      letter-spacing: 0.5px;
       @screen md {
         @apply text-lg;
         line-height: 30px;
+        letter-spacing: 1px;
       }
       @screen xl {
         @apply text-xl;
@@ -53,7 +38,11 @@ $irina: "Inria Sans", sans-serif;
       span {
         @apply font-semibold;
         a {
-          @apply text-contrasted underline;
+          @apply underline;
+          &:hover {
+            @apply text-contrasted;
+            transition: all 0.3s ease-in-out;
+          }
         }
       }
     }

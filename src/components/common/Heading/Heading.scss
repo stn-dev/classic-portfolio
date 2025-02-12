@@ -1,8 +1,6 @@
+$viga: "Viga", sans-serif;
 .heading-common {
-  @apply w-fit h-fit flex items-center justify-center gap-2;
-  @screen xl {
-    @apply gap-5;
-  }
+  @apply w-fit h-fit flex items-center justify-center;
 
   .svg-container {
     @apply w-[150px] h-auto;
@@ -20,6 +18,7 @@
       text {
         @apply fill-transparent stroke-1 stroke-contrasted opacity-0;
         font-size: 100%;
+        font-family: $viga;
         stroke-dasharray: 500px;
         stroke-dashoffset: 600px;
         @screen md {
@@ -29,15 +28,16 @@
     }
   }
   h2 {
-    @apply text-[40px] text-contrasted;
+    @apply text-[44px] text-contrasted w-fit;
+    font-family: $viga;
     @screen md {
       @apply text-[73px];
     }
     @screen xl {
-      @apply text-[85px];
+      @apply text-[87px];
     }
     @screen 2xl {
-      @apply text-[125px];
+      @apply text-[130px];
     }
   }
 }

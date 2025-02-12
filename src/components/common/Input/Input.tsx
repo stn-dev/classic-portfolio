@@ -1,13 +1,15 @@
-import React, { LegacyRef } from 'react'
+import React, { InputHTMLAttributes } from 'react'
 import './Input.scss'
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type?: "text" | "password" | "email"
   name: string
   placeholder: string
-  ref?: React.ForwardedRef<HTMLInputElement>
+  ref?: React.LegacyRef<HTMLInputElement>
   clasName?: string
+  value?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+
 }
 function Input(props: InputProps) {
   const {
@@ -16,6 +18,7 @@ function Input(props: InputProps) {
     placeholder,
     ref,
     clasName = "",
+    value,
     onChange
   } = props
   return (
@@ -24,6 +27,7 @@ function Input(props: InputProps) {
       placeholder={placeholder}
       type={type}
       ref={ref}
+      value={value}
       onChange={onChange}
       className={`input-component ${clasName}`}
     />

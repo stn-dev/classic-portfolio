@@ -8,6 +8,7 @@ import ArrowDown from './ArrowDown'
 import Localisation from './Localisation'
 import Message from './Message'
 import Phone from './Phone'
+import Logo from './Logo'
 
 const icons = {
   deco: <Deco />,
@@ -17,7 +18,8 @@ const icons = {
   arrowDwon: <ArrowDown />,
   localisation: <Localisation />,
   message: <Message />,
-  phone: <Phone />
+  phone: <Phone />,
+  logo: <Logo />
 }
 
 export type IconType = typeof icons

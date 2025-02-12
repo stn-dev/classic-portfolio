@@ -6,16 +6,14 @@ import gsap from 'gsap'
 import headerLinks from './data'
 import Link from 'next/link'
 import Container from '../common/Container/Container'
-import Image from 'next/image'
-import './Header.scss'
 import Deco from '../icons/Deco'
-
-type Menufunction = () => void
+import Icon from '../icons'
+import './Header.scss'
 
 function Header() {
   const [menu, setMenu] = useState<boolean>(false)
-  const toHideMenu: Menufunction = () => setMenu(false)
-  const toShowMenu: Menufunction = () => setMenu(true)
+  const toHideMenu = () => setMenu(false)
+  const toShowMenu = () => setMenu(true)
 
   useGSAP(() => {
     const tl1 = gsap.timeline()
@@ -25,6 +23,7 @@ function Header() {
       tl1
         .to(".header-section__transition", {
           top: 0,
+          opacity: 1,
           display: "block",
           ease: "elastic",
           duration: 0.1,
@@ -73,6 +72,7 @@ function Header() {
           duration: 0.1,
         })
         .to(".header-section__transition", {
+          opacity: 0,
           width: "10vw",
           left: "40%",
           duration: 0.2,
@@ -95,13 +95,7 @@ function Header() {
     <header className='header-section' >
       <Container>
         <div className="header-section__navbar">
-          <Image
-            className='header-section__navbar__logo'
-            width={80}
-            height={25}
-            src="/icon/logo.png"
-            alt="logo icon"
-          />
+          <Icon name='logo' />
           <div
             className="header-section__navbar__menu"
             onClick={toShowMenu}
@@ -121,14 +115,6 @@ function Header() {
               ))
             }
           </ul>
-          {/* 
-          <Image
-            className='header-section__navigation-menu__deco'
-            width={200}
-            height={150}
-            src="/image/menu-deco.png"
-            alt="decoration image"
-          /> */}
           <Deco className='header-section__navigation-menu__deco' />
           <div
             onClick={toHideMenu}

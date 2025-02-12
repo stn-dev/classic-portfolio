@@ -19,7 +19,7 @@ export const socialMediaData: SocialMediaType[] = [
     icon: "instagram",
   },
   {
-    href: "https://web.whatsapp.com/",
+    href: "https://wa.me/+261388209064?bo?text=Hello%2C%20ifeel%20free%20to%20reach%20out%20to%20me",
     icon: "whatsapp",
   },
 ];
