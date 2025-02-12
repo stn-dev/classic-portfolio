@@ -6,6 +6,7 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   placeholder: string
   ref?: React.LegacyRef<HTMLTextAreaElement>
   clasName?: string
+  value?: string
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
 function TextArea(props: TextAreaProps) {
@@ -14,6 +15,7 @@ function TextArea(props: TextAreaProps) {
     placeholder,
     ref,
     clasName = "",
+    value,
     onChange
   } = props
   return (
@@ -21,6 +23,7 @@ function TextArea(props: TextAreaProps) {
       name={name}
       placeholder={placeholder}
       ref={ref}
+      value={value}
       onChange={onChange}
       className={`textArea-component ${clasName}`}
     />

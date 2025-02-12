@@ -7,6 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder: string
   ref?: React.LegacyRef<HTMLInputElement>
   clasName?: string
+  value?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 
 }
@@ -17,6 +18,7 @@ function Input(props: InputProps) {
     placeholder,
     ref,
     clasName = "",
+    value,
     onChange
   } = props
   return (
@@ -25,6 +27,7 @@ function Input(props: InputProps) {
       placeholder={placeholder}
       type={type}
       ref={ref}
+      value={value}
       onChange={onChange}
       className={`input-component ${clasName}`}
     />

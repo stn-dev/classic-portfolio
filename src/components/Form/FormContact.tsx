@@ -13,32 +13,33 @@ interface InputErroClassNmaes {
   message: boolean
 }
 function FormContact() {
+  const [load, setLoad] = useState<boolean>(false)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   const [errorClass, setErrorClass] = useState<InputErroClassNmaes>({
     name: false, email: false, message: false
   })
   const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formdata = new FormData(e.currentTarget)
-    const name = formdata.get("name")?.toString()
-    const email = formdata.get("email")?.toString()
-    const message = formdata.get("message")?.toString()
-
+    setLoad(true)
     const templateParams = {
       to_name: "Mario",
       name: email,
       message: message
     }
 
-    if (!message) setErrorClass({ ...errorClass, message: true })
-    if (!email) setErrorClass({ ...errorClass, email: true })
-    if (!name) setErrorClass({ ...errorClass, name: true })
+    if (message === "") setErrorClass({ ...errorClass, message: true })
+    if (email === "") setErrorClass({ ...errorClass, email: true })
+    if (name === "") setErrorClass({ ...errorClass, name: true })
 
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Please, make sure to fill all the field",
       });
+      setLoad(false)
       return
     } else {
       setErrorClass({ name: false, email: false, message: false })
@@ -51,8 +52,10 @@ function FormContact() {
               title: "OK",
               text: "Message send successfully",
             });
-            console.log(response)
-            e.currentTarget.reset()
+            setName('')
+            setEmail('')
+            setMessage('')
+            setLoad(false)
             return
           },
           function (error) {
@@ -62,6 +65,7 @@ function FormContact() {
               text: "An error occured! Please check your network",
             });
             console.log("error is " + error)
+            setLoad(false)
             return
           }
         )
@@ -77,19 +81,29 @@ function FormContact() {
         name='name'
         placeholder='NAME'
         clasName={errorClass.name ? "error" : ""}
+        value={name}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
       />
       <Input
         name='email'
         type='email'
         placeholder='E-MAIL'
         clasName={errorClass.email ? "error" : ""}
+        value={email}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
       />
       <TextArea
         name='message'
         placeholder='MESSAGE'
         clasName={errorClass.message ? "error" : ""}
+        value={message}
+        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
       />
-      <Button label='SUBMIT' variant='contrasted' />
+      <Button
+        label={load ? "SUBMITING..." : 'SUBMIT'}
+        variant='contrasted'
+        isDisabled={load}
+      />
     </form>
   )
 }
