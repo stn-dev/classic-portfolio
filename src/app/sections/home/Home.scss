@@ -73,15 +73,33 @@ $contrasted: #76abae;
       }
     }
     &__imageOnHero {
-      @apply w-[200px] h-[250px];
+      @apply w-[190px] h-[250px] flex items-center justify-center relative overflow-hidden rounded-[40px];
       @screen md {
-        @apply w-[250px] h-[320px];
+        @apply w-[300px] h-[380px];
       }
       @screen lg {
         @apply hidden;
       }
+      &__background {
+        @apply absolute w-[150%] h-[120%] top-[30%] left-[-20%] bg-neutre rounded-[120px];
+        animation: bg-animation linear infinite 10s;
+        @screen md {
+          @apply rounded-[180px];
+        }
+      }
+      @keyframes bg-animation {
+        from {
+          rotate: 0;
+        }
+        to {
+          rotate: 360deg;
+        }
+      }
       img {
-        @apply w-full h-full;
+        @apply w-[130px] h-[220px] z-[2];
+        @screen md {
+          @apply w-[180px] h-[320px];
+        }
       }
     }
 

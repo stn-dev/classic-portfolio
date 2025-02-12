@@ -66,11 +66,13 @@ function Home() {
 
         <div className="home-section__center__imageOnHero" >
           <Image
-            src={"/image/heroImageOnMobile2.png"}
+            src={"/image/imageOnHeroMobile.png"}
             alt='profile image'
             width={300}
             height={450}
+            priority
           />
+          <div className='home-section__center__imageOnHero__background' ></div>
         </div>
 
         <div className="home-section__center__big-text">

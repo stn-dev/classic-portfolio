@@ -20,7 +20,7 @@ function FixedButton() {
 
   return (
     <div className={`fixed-button ${showButton ? "hiddenButton" : ""}`}>
-      <a href="/image/developerCV.png" download={"Mario developper CV"}>
+      <a href="/image/developerCV.png" download={"Front-end developer CV"}>
         <Button label='DOWNLOAD CV' variant='contrasted' />
       </a>
       <a href="#contact">
