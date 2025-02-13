@@ -18,33 +18,29 @@
   }
 
   .reflectOne {
-    @apply w-[20%] left-[-30%];
-    transition: all 0.5s ease-in-out;
+    @apply w-[20%] left-[-35%];
+    transition: all 0s ease-in-out;
   }
 
   .reflectTwo {
     @apply w-[10%] left-[-45%];
-    transition: all 1s ease-in-out;
+    transition: all 0s ease-in-out;
   }
 
   &:hover .reflectOne {
     left: 200%;
+    transition: all 0.5s ease-in-out;
   }
   &:hover .reflectTwo {
     left: 150%;
+    transition: all 1s ease-in-out;
   }
 }
 .contrasted {
   @apply bg-contrasted text-dark;
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 .dark {
   @apply bg-gray-900 text-contrasted;
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 .disabled {
   @apply saturate-50;

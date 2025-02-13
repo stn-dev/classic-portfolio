@@ -81,7 +81,7 @@ $contrasted: #76abae;
         @apply hidden;
       }
       &__background {
-        @apply absolute w-[150%] h-[120%] top-[30%] left-[-20%] bg-neutre rounded-[120px];
+        @apply absolute w-[150%] h-[120%] top-[50%] left-[-20%] bg-neutre rounded-[120px];
         animation: bg-animation linear infinite 10s;
         @screen md {
           @apply rounded-[180px];
