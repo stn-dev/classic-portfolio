@@ -9,6 +9,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   clasName?: string
   value?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
 
 }
 function Input(props: InputProps) {
@@ -19,7 +20,8 @@ function Input(props: InputProps) {
     ref,
     clasName = "",
     value,
-    onChange
+    onChange,
+    onKeyUp
   } = props
   return (
     <input
@@ -30,6 +32,7 @@ function Input(props: InputProps) {
       value={value}
       onChange={onChange}
       className={`input-component ${clasName}`}
+      onKeyUp={onKeyUp}
     />
   )
 }

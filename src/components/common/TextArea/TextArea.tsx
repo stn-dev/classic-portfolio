@@ -8,6 +8,7 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   clasName?: string
   value?: string
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
+  onKeyUp?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void
 }
 function TextArea(props: TextAreaProps) {
   const {
@@ -16,7 +17,8 @@ function TextArea(props: TextAreaProps) {
     ref,
     clasName = "",
     value,
-    onChange
+    onChange,
+    onKeyUp
   } = props
   return (
     <textarea
@@ -25,6 +27,7 @@ function TextArea(props: TextAreaProps) {
       ref={ref}
       value={value}
       onChange={onChange}
+      onKeyUp={onKeyUp}
       className={`textArea-component ${clasName}`}
     />
   )
