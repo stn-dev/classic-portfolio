@@ -22,7 +22,7 @@ interface SkillBoxType {
   text: TextType;
 }
 interface SkillBoxContainerType {
-  title: "CORE" | "TOOLS" | "FRAMEWORK";
+  title: "CORE" | "TOOLS & OTHERS" | "FRAMEWORK";
   classNames: `skill-container`;
   style: React.CSSProperties;
   contents: {
@@ -95,7 +95,7 @@ export const core: SkillBoxContainerType = {
   },
 };
 export const tools: SkillBoxContainerType = {
-  title: "TOOLS",
+  title: "TOOLS & OTHERS",
   classNames: "skill-container",
   style: scrollStyle2,
   contents: {

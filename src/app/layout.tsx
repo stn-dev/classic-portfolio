@@ -3,7 +3,7 @@ import Header from "@/components/Header/Header";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  title: "stn | portfolio",
+  title: "Mario | portfolio",
   description: "This is my personal portfolio as a front-end developer , you can see a part of my world, my skills and contact me directly here",
   openGraph: {
     title: "stn dev portfolio",
