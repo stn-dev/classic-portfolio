@@ -1,5 +1,6 @@
 .social-icon {
   @apply w-[18px] h-[18px];
+
   @screen md {
     @apply w-[22px] h-[22px];
   }
@@ -8,6 +9,13 @@
   }
   @screen 2xl {
     @apply w-[28px] h-[28px];
+  }
+  &:hover path {
+    @apply fill-transparent;
+  }
+  path {
+    @apply fill-contrasted stroke-1 stroke-contrasted;
+    transition: all 0.3s;
   }
 }
 .arrow-down {

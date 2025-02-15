@@ -26,7 +26,8 @@ $irina: "Inria Sans", sans-serif;
   }
 
   &__navigation-menu {
-    @apply w-screen h-screen absolute opacity-0 top-0 bg-Primarmy overflow-hidden px-5 z-50 left-[-100vw];
+    @apply w-full h-screen absolute opacity-0 top-0 bg-Primarmy overflow-hidden px-5 z-50 left-[-100vw];
+
     @screen md {
       @apply px-[30px];
     }
