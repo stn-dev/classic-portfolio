@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "stn dev portfolio",
     description: 'This is my personal portfolio as a front-end developer , you can see a part of my world, my skills and contact me directly here',
-    url: "http://stn-portfolio.vercel.app",
+    url: "https://stn-portfolio.vercel.app/",
     type: "website",
     locale: "mg-MADAGASCAR",
     siteName: "stn-dev",
     images: [
       {
-        url: 'http://stn-portfolio.vercel.app/image/opengraph-image.png',
+        url: 'https://stn-portfolio.vercel.app//image/opengraph-image.png',
         width: 1200,
         height: 630,
         alt: "home section image"
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mario | portfolio",
     description: "This is my personal portfolio as a front-end developer , you can see a part of my world, my skills and contact me directly here",
-    images: ["http://stn-portfolio.vercel.app/image/opengraph-image.png"],
+    images: ["https://stn-portfolio.vercel.app//image/opengraph-image.png"],
   },
 };
 
