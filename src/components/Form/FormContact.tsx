@@ -7,16 +7,14 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 import './FormContact.scss'
 
-interface InputErroClassNmaes {
-  name: boolean
-  email: boolean
-  message: boolean
-}
 function FormContact() {
   const [load, setLoad] = useState<boolean>(false)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const serviceId = import.meta.env.VITE_SERVICE_ID
+  const templateId = import.meta.env.VITE_TEMPLATE_ID
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY
 
   const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -38,7 +36,7 @@ function FormContact() {
       return
     } else {
       emailjs
-        .send("service_56bza87", "template_8phdps8", templateParams, "Y55U-eVuDLLpHV7wh")
+        .send(serviceId, templateId, templateParams, publicKey)
         .then(
           function (response) {
             Swal.fire({
