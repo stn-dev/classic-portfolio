@@ -7,6 +7,11 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 import './FormContact.scss'
 
+interface InputErroClassNmaes {
+  name: boolean
+  email: boolean
+  message: boolean
+}
 function FormContact() {
   const [load, setLoad] = useState<boolean>(false)
   const [name, setName] = useState('')
